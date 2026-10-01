@@ -56,3 +56,43 @@ a{color:var(--elec)}
   html{scroll-behavior:auto}
   *,*::before,*::after{animation:none!important;transition:none!important}
 }
+
+/* ---------- 밤하늘 띠: 첫 화면과 각 페이지 머리에 쓰는 어두운 무대 ---------- */
+.night{
+  --nbg:#07090A;
+  --ink:#ECEFE9; --ink2:#AEB7B0; --ink3:#828C85;
+  --rule:rgba(255,255,255,.10); --grid:rgba(255,255,255,.035);
+  --card:rgba(255,255,255,.04); --sunk:rgba(255,255,255,.06);
+  --elec:#7DBBE8; --mag:#EE9A76; --light:#C3A4EC;
+  --elecw:rgba(125,187,232,.12); --magw:rgba(238,154,118,.12); --lightw:rgba(195,164,236,.12);
+  --warn:#E0B04A; --warnw:rgba(224,176,74,.12);
+  --green:#93CC80; --greenw:rgba(147,204,128,.12);
+  --shadow:0 20px 50px -24px rgba(0,0,0,.9);
+  color-scheme:dark;
+  position:relative;isolation:isolate;overflow:hidden;
+  color:var(--ink);
+  background:
+    radial-gradient(55% 70% at 8% -10%,rgba(160,112,228,.26),transparent 62%),
+    radial-gradient(45% 60% at 100% 10%,rgba(80,150,215,.16),transparent 62%),
+    radial-gradient(40% 50% at 70% 110%,rgba(238,154,118,.10),transparent 60%),
+    linear-gradient(var(--grid) 1px,transparent 1px) 0 0/32px 32px,
+    linear-gradient(90deg,var(--grid) 1px,transparent 1px) 0 0/32px 32px,
+    var(--nbg);
+}
+.night::after{ /* 얇은 필름 질감 */
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.07;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.night .wave{position:absolute;left:0;right:0;z-index:-1;width:100%;pointer-events:none}
+.night :focus-visible{outline-color:var(--light)}
+.night .tbtn{color:var(--ink2);border-color:var(--rule);background:rgba(255,255,255,.03)}
+.night .tbtn:hover{color:var(--ink);border-color:rgba(255,255,255,.3)}
+
+/* ---------- 읽기 진행 막대, 위로 버튼 ---------- */
+.progress{position:fixed;left:0;right:0;top:0;height:3px;z-index:60;pointer-events:none}
+.progress i{display:block;height:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--elec),var(--light) 55%,var(--mag))}
+.totop{position:fixed;right:18px;bottom:18px;z-index:50;width:46px;height:46px;border-radius:50%;border:1px solid var(--rule);background:var(--card);color:var(--ink);box-shadow:var(--shadow);display:grid;place-items:center;cursor:pointer;opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .25s ease,transform .25s ease}
+.totop.on{opacity:1;transform:none;pointer-events:auto}
+.totop:hover{border-color:var(--ink3)}
+.totop svg{width:18px;height:18px}
+@media print{.progress,.totop,.night .wave{display:none!important}.night{background:#fff!important;color:#000!important}}

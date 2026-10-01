@@ -7,8 +7,7 @@
 <meta name="description" content="Inertia 2026 POLARIS 준비 일정. 날짜별 할 일, 장소, 담당과 장소이동신청, 실험실 예약.">
 <meta property="og:title" content="일정 · Inertia">
 <meta property="og:description" content="10/17부터 11/7 발표까지의 준비 일정">
-<meta name="theme-color" content="#F4F6F1" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#111510" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#07090A">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,49 +24,55 @@
 .cat-event{--cc:var(--green);--ccw:var(--greenw)}
 
 /* ---------- 머리 ---------- */
-.top{border-bottom:1px solid var(--rule);padding-block:22px 28px}
-.crumbs{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:28px;font:500 12px var(--mono);letter-spacing:.06em}
+.top{padding-block:0 clamp(30px,5vw,48px)}
+.top .wave{top:var(--wt,0px);height:var(--wh,240px);opacity:.7}
+.crumbs{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 clamp(34px,6vw,64px);padding-block:14px;border-bottom:1px solid var(--rule);font:500 12px var(--mono);letter-spacing:.06em}
 .crumbs .l{display:flex;gap:20px}
 .crumbs a{color:var(--ink2);text-decoration:none}
 .crumbs a:hover,.crumbs a:focus-visible{color:var(--ink);text-decoration:underline}
-h1.title{font-family:var(--serif);font-size:clamp(42px,8vw,70px);line-height:1.05;margin:10px 0 12px}
+h1.title{font-family:var(--serif);font-size:clamp(48px,9vw,88px);line-height:1.02;letter-spacing:-.02em;margin:12px 0 14px}
+.top .eyebrow{font-family:var(--sans);font-size:13px;letter-spacing:.04em}
 .sub{max-width:46em;color:var(--ink2);margin:0 0 4px}
-.revnote{max-width:46em;margin:12px 0 0;padding:9px 13px;background:var(--lightw);border-left:3px solid var(--light);font-size:14px;color:var(--ink)}
-.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:24px}
-.tile{display:block;min-width:0;background:var(--card);border:1px solid var(--rule);border-radius:3px;padding:14px 16px;color:inherit;text-decoration:none}
+.revnote{max-width:46em;margin:14px 0 0;padding:10px 15px;background:var(--lightw);border-left:3px solid var(--light);border-radius:0 12px 12px 0;font-size:14px;color:var(--ink)}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:30px}
+.tile{display:block;min-width:0;background:var(--card);border:1px solid var(--rule);border-radius:18px;padding:16px 20px;color:inherit;text-decoration:none;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);transition:border-color .25s ease,transform .25s ease}
+a.tile:hover{transform:translateY(-3px)}
 a.tile:hover,a.tile:focus-visible{border-color:var(--ink3)}
-.tile .k{font:500 11px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink3)}
-.tile .v{font-family:var(--serif);font-weight:700;font-size:clamp(24px,4vw,34px);line-height:1.2;margin-top:4px}
+.tile .k{font:500 12.5px var(--sans);letter-spacing:.02em;color:var(--ink3)}
+.tile .v{font:600 clamp(22px,3.4vw,30px) var(--sans);letter-spacing:-.01em;line-height:1.25;margin-top:4px}
+.tile a,.stats a.tile .v{font-size:clamp(20px,2.8vw,26px)}
+.tile.dd .v{font:500 clamp(28px,4.4vw,40px) var(--mono);color:var(--light);letter-spacing:-.02em}
 .tile .s{font-size:13.5px;line-height:1.5;color:var(--ink2);margin-top:2px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.meter{height:6px;border-radius:3px;background:var(--sunk);margin-top:9px;overflow:hidden}
-.meter i{display:block;height:100%;width:0;background:var(--mag);transition:width .35s ease}
+.meter{height:6px;border-radius:3px;background:var(--sunk);margin-top:12px;overflow:hidden}
+.meter i{display:block;height:100%;width:0;border-radius:3px;background:linear-gradient(90deg,var(--elec),var(--light),var(--mag));transition:width .45s cubic-bezier(.2,.7,.2,1)}
 
 /* ---------- 탭 ---------- */
-.tabs{position:sticky;top:0;z-index:30;background:var(--paper);border-bottom:1px solid var(--rule)}
+.tabs{position:sticky;top:0;z-index:30;background:var(--paper);background:color-mix(in srgb,var(--paper) 85%,transparent);-webkit-backdrop-filter:saturate(1.5) blur(14px);backdrop-filter:saturate(1.5) blur(14px);border-bottom:1px solid var(--rule)}
 .tabs .wrap{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
 .tabs .wrap::-webkit-scrollbar{display:none}
 .tabs button{appearance:none;flex:none;background:none;border:0;border-bottom:3px solid transparent;padding:14px 14px 11px;font:400 15px var(--sans);color:var(--ink2);cursor:pointer;white-space:nowrap}
 .tabs button:hover{color:var(--ink)}
-.tabs button[aria-selected="true"]{color:var(--ink);font-weight:500;border-bottom-color:var(--mag)}
+.tabs button[aria-selected="true"]{color:var(--ink);font-weight:500;border-bottom-color:var(--light)}
 main{padding-block:26px 64px}
 [hidden]{display:none!important}
 
 /* ---------- 달력 + 조건 ---------- */
 .board{display:grid;grid-template-columns:minmax(300px,430px) minmax(0,1fr);gap:28px;align-items:start;margin-bottom:26px}
-.cal{background:var(--card);border:1px solid var(--rule);border-radius:3px;padding:12px}
+.cal{background:var(--card);border:1px solid var(--rule);border-radius:18px;padding:14px}
 .cal .wd,.cal .grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}
 .cal .wd{margin-bottom:4px;font:500 11px var(--mono);color:var(--ink3);text-align:center}
-.cell{position:relative;appearance:none;display:flex;flex-direction:column;justify-content:space-between;aspect-ratio:1/.88;padding:5px 6px;text-align:left;border:1px solid transparent;border-radius:3px;background:var(--ccw);color:var(--ink);font:500 12.5px var(--mono);cursor:pointer}
+.cell{position:relative;appearance:none;display:flex;flex-direction:column;justify-content:space-between;aspect-ratio:1/.88;padding:5px 6px;text-align:left;border:1px solid transparent;border-radius:9px;background:var(--ccw);color:var(--ink);font:500 12.5px var(--mono);cursor:pointer;transition:transform .15s ease,border-color .15s ease}
+.cell:hover{transform:translateY(-1px)}
 .cell:hover,.cell:focus-visible{border-color:var(--cc)}
 .cell.empty{background:transparent;cursor:default;pointer-events:none}
 .cell .dots{display:flex;gap:3px}
 .cell .dots i{width:6px;height:6px;border-radius:50%;background:var(--cc)}
-.cell.today{outline:2px solid var(--ink);outline-offset:1px}
+.cell.today{outline:2px solid var(--light);outline-offset:1px;box-shadow:0 0 18px -4px var(--light)}
 .cell.alldone::after{content:"\2713";position:absolute;right:5px;top:3px;font-size:11px;color:var(--cc)}
 .cell.dim{opacity:.35}
 .ctl{min-width:0}
-.ruleline{margin:0 0 14px;padding:10px 13px;background:var(--card);border:1px solid var(--rule);border-radius:3px;font-size:14px;color:var(--ink2)}
-.search{width:100%;padding:10px 13px;border:1px solid var(--rule);border-radius:3px;background:var(--card);color:var(--ink);font:400 15px var(--sans)}
+.ruleline{margin:0 0 14px;padding:11px 15px;background:var(--card);border:1px solid var(--rule);border-radius:14px;font-size:14px;color:var(--ink2)}
+.search{width:100%;padding:11px 15px;border:1px solid var(--rule);border-radius:14px;background:var(--card);color:var(--ink);font:400 15px var(--sans)}
 .search::placeholder{color:var(--ink3)}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
 .chip{appearance:none;display:inline-flex;align-items:center;gap:7px;padding:5px 11px;border:1px solid var(--rule);border-radius:999px;background:var(--card);color:var(--ink2);font:400 13.5px var(--sans);cursor:pointer}
@@ -77,9 +82,9 @@ main{padding-block:26px 64px}
 .chip[aria-pressed="false"]{opacity:.55}
 .row{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;margin:10px 0}
 .row label{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:var(--ink2)}
-.row select{padding:7px 10px;border:1px solid var(--rule);border-radius:3px;background:var(--card);color:var(--ink);font:400 14px var(--sans)}
+.row select{padding:7px 10px;border:1px solid var(--rule);border-radius:10px;background:var(--card);color:var(--ink);font:400 14px var(--sans)}
 .row input[type="checkbox"]{width:17px;height:17px;accent-color:var(--mag);margin:0}
-.btn{appearance:none;padding:7px 13px;border:1px solid var(--rule);border-radius:3px;background:var(--card);color:var(--ink);font:400 14px var(--sans);cursor:pointer}
+.btn{appearance:none;padding:8px 15px;border:1px solid var(--rule);border-radius:12px;background:var(--card);color:var(--ink);font:400 14px var(--sans);cursor:pointer}
 .btn:hover{border-color:var(--ink3)}
 .btn.main{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 .count{font:400 13px var(--mono);color:var(--ink3);margin:6px 0 0}
@@ -89,16 +94,19 @@ main{padding-block:26px 64px}
 .dayhead{position:sticky;top:calc(var(--tabs-h) + 14px);align-self:start}
 .dnum{font:500 26px var(--mono);letter-spacing:-.02em;line-height:1.1}
 .dsub{font-size:13px;color:var(--ink2);margin-top:2px}
-.dtag{display:inline-block;margin-top:7px;padding:1px 8px;border-radius:2px;background:var(--ink);color:var(--paper);font:500 11px var(--mono);letter-spacing:.06em}
+.day.today .dnum{color:var(--light)}
+.dtag{display:inline-block;margin-top:7px;padding:1px 9px;border-radius:999px;background:var(--light);color:var(--paper);font:500 11px var(--mono);letter-spacing:.06em}
 .day.past .slots{opacity:.72}
 .day.flash .slots{animation:flash 1.8s ease}
 @keyframes flash{0%,100%{background:transparent}25%{background:var(--lightw)}}
-.slots{list-style:none;margin:0;padding:0;display:grid;gap:10px;border-radius:3px}
-.slot{display:grid;grid-template-columns:172px minmax(0,1fr) 116px;gap:14px;padding:12px 14px;background:var(--card);border:1px solid var(--rule);border-left:4px solid var(--cc);border-radius:3px}
+.slots{list-style:none;margin:0;padding:0;display:grid;gap:12px;border-radius:14px}
+.slot{display:grid;grid-template-columns:172px minmax(0,1fr) 116px;gap:14px;position:relative;overflow:hidden;padding:15px 18px 15px 22px;background:var(--card);border:1px solid var(--rule);border-radius:16px;transition:border-color .2s ease,box-shadow .2s ease}
+.slot::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--cc)}
+.slot:hover{border-color:color-mix(in srgb,var(--cc) 45%,var(--rule));box-shadow:0 14px 30px -24px var(--cc)}
 .when{display:flex;flex-direction:column;align-items:flex-start;gap:6px;min-width:0}
-.band{padding:1px 7px;border-radius:2px;background:var(--ccw);color:var(--cc);font:600 12px var(--mono);letter-spacing:.06em}
+.band{padding:1px 8px;border-radius:6px;background:var(--ccw);color:var(--cc);font:600 12px var(--mono);letter-spacing:.06em}
 .time{font:500 13px var(--mono)}
-.tag{padding:0 7px;border:1px solid var(--rule);border-radius:2px;color:var(--ink2);font-size:12px;line-height:1.7;white-space:nowrap}
+.tag{padding:0 8px;border:1px solid var(--rule);border-radius:6px;color:var(--ink2);font-size:12px;line-height:1.7;white-space:nowrap}
 .tag.need{border-color:var(--warn);color:var(--warn)}
 .tags{display:flex;flex-wrap:wrap;gap:5px}
 .tasks{margin:0;padding:0;list-style:none;font-size:14.5px;line-height:1.65}
@@ -117,8 +125,8 @@ ul.tasks li::before{content:"";position:absolute;left:0;top:.8em;width:6px;heigh
 /* ---------- 장소이동신청, 실험실 예약 ---------- */
 .ph h2{font-family:var(--serif);font-size:clamp(24px,4vw,32px);margin:0 0 8px}
 .ph p{max-width:46em;color:var(--ink2);margin:0 0 10px}
-.ph h3{font:500 12px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);margin:28px 0 8px}
-.tw{overflow-x:auto;border:1px solid var(--rule);border-radius:3px;background:var(--card)}
+.ph h3{font:600 13.5px var(--sans);letter-spacing:.02em;color:var(--light);margin:32px 0 10px}
+.tw{overflow-x:auto;border:1px solid var(--rule);border-radius:16px;background:var(--card)}
 table{width:100%;border-collapse:collapse;font-size:14.5px}
 th,td{padding:10px 13px;text-align:left;vertical-align:top;border-bottom:1px solid var(--rule)}
 thead th{background:var(--sunk);font:500 12px var(--mono);letter-spacing:.04em;color:var(--ink2);white-space:nowrap}
@@ -128,7 +136,7 @@ td.nw{white-space:nowrap}
 .pills{display:flex;flex-wrap:wrap;gap:7px;margin:8px 0}
 .pills span{padding:3px 11px;border:1px solid var(--rule);border-radius:999px;background:var(--card);font-size:13.5px}
 .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
-.lab{display:flex;flex-direction:column;gap:8px;padding:14px 16px;background:var(--card);border:1px solid var(--rule);border-top:3px solid var(--mag);border-radius:3px}
+.lab{display:flex;flex-direction:column;gap:8px;padding:14px 16px;background:var(--card);border:1px solid var(--rule);border-top:3px solid var(--mag);border-radius:16px}
 .lab.opt{border-top-color:var(--ink3)}
 .lab .h{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
 .lab .n{font:600 13px var(--mono);letter-spacing:.06em}
@@ -138,7 +146,7 @@ td.nw{white-space:nowrap}
 .kind{align-self:flex-start;padding:1px 9px;border-radius:2px;font:500 12px var(--mono);background:var(--magw);color:var(--mag)}
 .kind.opt{background:var(--sunk);color:var(--ink2)}
 .checks{list-style:none;margin:0;padding:0;display:grid;gap:10px}
-.checks li{display:grid;grid-template-columns:34px minmax(0,1fr) auto;gap:4px 12px;padding:12px 14px;background:var(--card);border:1px solid var(--rule);border-radius:3px}
+.checks li{display:grid;grid-template-columns:34px minmax(0,1fr) auto;gap:4px 12px;padding:14px 16px;background:var(--card);border:1px solid var(--rule);border-radius:16px}
 .checks .num{font:600 14px var(--mono);color:var(--light)}
 .checks .q{font-weight:500}
 .checks .why{grid-column:2;font-size:14px;color:var(--ink2)}
@@ -152,8 +160,11 @@ td.nw{white-space:nowrap}
 #app-error{padding:40px 0;color:var(--ink2)}
 
 @media (max-width:860px){.board{grid-template-columns:1fr}}
+@media (max-width:420px){.cell{font-size:11px;padding:4px 5px}.cal{padding:10px}}
 @media (max-width:720px){
-  .stats{grid-template-columns:1fr}
+  .stats{grid-template-columns:1fr 1fr;gap:10px}
+  .stats>:last-child{grid-column:1/-1}
+  .tile{padding:14px 16px}
   .day{grid-template-columns:1fr}
   .dayhead{position:static;display:flex;align-items:baseline;gap:10px;margin-bottom:8px}
   .dtag{margin-top:0}
@@ -171,7 +182,7 @@ td.nw{white-space:nowrap}
   tbody td:first-child{border-left:0}
 }
 @media print{
-  .tabs,.board .ctl .chips,.board .ctl .row,.board .ctl .search,.crumbs .tbtn,.foot .acts,.chk,.cell{display:none!important}
+  .top .wave,.totop,.progress,.tabs,.board .ctl .chips,.board .ctl .row,.board .ctl .search,.crumbs .tbtn,.foot .acts,.chk,.cell{display:none!important}
   .slot{break-inside:avoid}
   .dayhead{position:static}
 }
@@ -179,8 +190,10 @@ td.nw{white-space:nowrap}
 </head>
 <body>
 <a class="skip" href="#content">본문으로 건너뛰기</a>
+<div class="progress" aria-hidden="true"><i></i></div>
 
-<header class="top gridbg">
+<header class="top night">
+  <canvas class="wave" aria-hidden="true"></canvas>
   <div class="wrap">
     <div class="crumbs">
       <span class="l"><a href="./">&larr; Inertia</a><a href="study.html">공부자료</a></span>
@@ -204,7 +217,7 @@ td.nw{white-space:nowrap}
 
 <main id="content" class="wrap">
   <noscript><p class="none">일정을 보려면 자바스크립트가 필요하다.</p></noscript>
-  <div id="app-error" hidden>일정 데이터를 불러오지 못했다. 페이지를 새로고침해 본다.</div>
+  <div id="app-error" hidden>일정 데이터를 불러오지 못했다. 새로고침해 보고, 그래도 안 되면 저장소에 schedule-data.js 파일이 올라가 있는지 확인한다.</div>
 
   <section id="p-all" role="tabpanel" aria-labelledby="t-all">
     <div class="board">
@@ -234,7 +247,7 @@ td.nw{white-space:nowrap}
 
 <footer class="foot">
   <div class="wrap">
-    <p>체크 표시는 지금 쓰는 기기의 브라우저에만 저장된다. 팀이 함께 보는 완료 표시는 공유 시트를 쓴다.</p>
+    <p>체크 표시는 이 기기의 브라우저에만 저장된다. 팀이 같이 보는 완료 표시는 공유 시트에 한다.</p>
     <div class="acts">
       <a class="btn" href="schedule/일정3.xlsx" download>엑셀 파일 받기</a>
       <button class="btn" type="button" onclick="window.print()">인쇄</button>
@@ -242,6 +255,7 @@ td.nw{white-space:nowrap}
   </div>
 </footer>
 
+<button class="totop" type="button" aria-label="맨 위로"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
 <script src="schedule-data.js"></script>
 <script>
 (function () {
@@ -300,10 +314,11 @@ td.nw{white-space:nowrap}
   }
 
   /* ---------- 머리 ---------- */
-  $('#sub').textContent = S.subtitle;
-  $('#rule').textContent = S.rule;
+  var tidy = Inertia.tidy;
+  $('#sub').textContent = tidy(S.subtitle);
+  $('#rule').textContent = tidy(S.rule);
   var legendParts = S.legend.split('|');
-  if (legendParts[1]) { var rv = $('#rev'); rv.textContent = legendParts[1].trim(); rv.hidden = false; }
+  if (legendParts[1]) { var rv = $('#rev'); rv.textContent = tidy(legendParts[1]); rv.hidden = false; }
 
   var nextIt = Inertia.nextItem(items);
   var left = Inertia.daysBetween(today, D.event.date);
@@ -318,7 +333,7 @@ td.nw{white-space:nowrap}
     prog.textContent = n + ' / ' + items.length;
     meter.style.width = (n / items.length * 100) + '%';
   }
-  stats.appendChild(h('div', { class: 'tile' },
+  stats.appendChild(h('div', { class: 'tile dd' },
     h('div', { class: 'k', text: '발표까지' }),
     h('div', { class: 'v', text: left < 0 ? '종료' : Inertia.ddayLabel(left) }),
     h('div', { class: 's', text: evLabel })));
@@ -404,8 +419,8 @@ td.nw{white-space:nowrap}
     if (bits.length > 1) node.classList.add('hot');
   }
   function taskBlock(task) {
-    var parts = task.split(' · ').map(function (s) { return s.trim(); }).filter(Boolean);
-    if (parts.length < 2) { var p = h('p', { class: 'tasks' }); fillStars(p, task); return p; }
+    var parts = task.split(' · ').map(function (s) { return tidy(s); }).filter(Boolean);
+    if (parts.length < 2) { var p = h('p', { class: 'tasks' }); fillStars(p, tidy(task)); return p; }
     var ul = h('ul', { class: 'tasks' });
     parts.forEach(function (t) { var li = h('li'); fillStars(li, t); ul.appendChild(li); });
     return ul;
@@ -455,7 +470,7 @@ td.nw{white-space:nowrap}
         g.date === today ? h('span', { class: 'dtag', text: '오늘' }) : null);
       var ul = h('ul', { class: 'slots' });
       g.rows.forEach(function (r) { ul.appendChild(slotEl(r[0], r[1])); });
-      listEl.appendChild(h('section', { class: 'day' + (g.date < today ? ' past' : ''), id: 'd-' + g.date }, head, ul));
+      listEl.appendChild(h('section', { class: 'day' + (g.date < today ? ' past' : '') + (g.date === today ? ' today' : ''), id: 'd-' + g.date }, head, ul));
     });
     $('#count').textContent = items.length + '칸 중 ' + shown + '칸 표시';
     if (!shown) {
@@ -516,8 +531,8 @@ td.nw{white-space:nowrap}
 
   /* ---------- 장소이동신청 ---------- */
   function buildMoves() {
-    var p = $('#p-moves'), sp = splitRev(M.note);
-    p.appendChild(h('h2', { text: M.title }));
+    var p = $('#p-moves'), sp = splitRev(tidy(M.note));
+    p.appendChild(h('h2', { text: tidy(M.title) }));
     if (sp[0]) p.appendChild(h('p', { text: sp[0] }));
     if (sp[1]) p.appendChild(h('p', { class: 'revnote', text: sp[1] }));
     var weeks = [], byW = {};
@@ -534,7 +549,7 @@ td.nw{white-space:nowrap}
         tr.appendChild(h('td', { 'data-l': '날짜', class: 'nw', text: r.md + '(' + r.wd + ')' }));
         tr.appendChild(h('td', { 'data-l': '시간대', class: 'nw', text: r.slot }));
         tr.appendChild(h('td', { 'data-l': '장소', text: r.place }));
-        tr.appendChild(h('td', { 'data-l': '내용', text: r.what }));
+        tr.appendChild(h('td', { 'data-l': '내용', text: tidy(r.what) }));
         tr.appendChild(h('td', { 'data-l': '제출', class: 'nw', text: r.due }));
         tr.appendChild(h('td', { 'data-l': '신청함' }, h('label', { class: 'chk', for: id }, inp, '신청함')));
         tb.appendChild(tr);
@@ -554,8 +569,8 @@ td.nw{white-space:nowrap}
 
   /* ---------- 실험실 예약 ---------- */
   function buildLab() {
-    var p = $('#p-lab'), sp = splitRev(L.note);
-    p.appendChild(h('h2', { text: L.title }));
+    var p = $('#p-lab'), sp = splitRev(tidy(L.note));
+    p.appendChild(h('h2', { text: tidy(L.title) }));
     if (sp[0]) p.appendChild(h('p', { text: sp[0] }));
     if (sp[1]) p.appendChild(h('p', { class: 'revnote', text: sp[1] }));
     p.appendChild(h('h3', { text: '회차별 준비' }));
@@ -565,7 +580,7 @@ td.nw{white-space:nowrap}
       splitTop(s.equip, ',').forEach(function (e) { ul.appendChild(h('li', { text: e })); });
       cards.appendChild(h('article', { class: 'lab' + (opt ? ' opt' : '') },
         h('div', { class: 'h' }, h('span', { class: 'n', text: s.n + '회차' }), h('span', { class: 'd', text: s.md + '(' + s.wd + ') ' + s.slot })),
-        h('div', { class: 'p', text: s.purpose }), ul,
+        h('div', { class: 'p', text: tidy(s.purpose) }), ul,
         h('span', { class: 'kind' + (opt ? ' opt' : ''), text: s.kind })));
     });
     p.appendChild(cards);
@@ -576,9 +591,9 @@ td.nw{white-space:nowrap}
       var inp = h('input', { type: 'checkbox', id: id }); inp.checked = !!done[key];
       var li = h('li', { class: inp.checked ? 'done' : '' },
         h('span', { class: 'num', text: c.n }),
-        h('span', { class: 'q', text: c.item }),
+        h('span', { class: 'q', text: tidy(c.item) }),
         h('label', { class: 'chk', for: id }, inp, '여쭤봄'),
-        h('span', { class: 'why', text: c.why }));
+        h('span', { class: 'why', text: tidy(c.why) }));
       inp.addEventListener('change', function () { setDone(key, inp.checked); li.classList.toggle('done', inp.checked); });
       ol.appendChild(li);
     });
@@ -613,6 +628,29 @@ td.nw{white-space:nowrap}
   /* ---------- 시작 ---------- */
   buildCal(); buildMoves(); buildLab();
   renderList(); paintProgress(); paintCal();
+
+  /* 머리의 파동은 숫자 상자 뒤로 지나간다 */
+  var top = $('.top'), cv = $('.top .wave');
+  function placeWave() {
+    var r = stats.getBoundingClientRect(), tr = top.getBoundingClientRect();
+    var hh = Math.max(220, Math.min(380, r.height * 2.4));
+    top.style.setProperty('--wh', Math.round(hh) + 'px');
+    top.style.setProperty('--wt', Math.round(r.top - tr.top + r.height / 2 - hh / 2) + 'px');
+  }
+  placeWave(); window.addEventListener('resize', placeWave);
+  Inertia.wave(cv, { y: 0.5, amp: 0.3, speed: 1.2 });
+
+  /* 진행 막대와 위로 버튼 */
+  var bar = $('.progress i'), totop = $('.totop'), ticking = false;
+  function onScroll() {
+    ticking = false;
+    var y = window.scrollY, H = document.documentElement.scrollHeight - innerHeight;
+    bar.style.transform = 'scaleX(' + (H > 0 ? Math.min(1, y / H) : 0) + ')';
+    totop.classList.toggle('on', y > 700);
+  }
+  window.addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+  totop.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  onScroll();
   var hash = decodeURIComponent(location.hash.slice(1));
   if (hash === 'moves' || hash === 'lab') showTab(hash);
   else if (/^\d{4}-\d{2}-\d{2}$/.test(hash)) setTimeout(function () { goDay(hash); }, 60);
