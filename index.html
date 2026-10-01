@@ -13,8 +13,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Gowun+Batang:wght@400;700&family=IBM+Plex+Sans+KR:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="site.css">
-<script src="site.js"></script>
+<link rel="stylesheet" href="site.css?v=20261001b">
+<script src="site.js?v=20261001b"></script>
 <style>
 html,body{background:#07090A}
 .home{min-height:100vh;min-height:100svh;display:flex;flex-direction:column}
@@ -181,9 +181,10 @@ html,body{background:#07090A}
   </footer>
 </div>
 
-<script src="schedule-data.js"></script>
+<script src="schedule-data.js?v=20261001b"></script>
 <script>
 (function () {
+  if (!window.Inertia) return;
   // 파동이 큰 글씨의 한가운데를 지나가도록 캔버스 위치를 맞춘다
   var wm = document.querySelector('.wordmark'), home = document.querySelector('.home'), cv = document.getElementById('wave');
   function placeWave() {
@@ -195,7 +196,7 @@ html,body{background:#07090A}
   placeWave();
   window.addEventListener('resize', placeWave);
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { placeWave(); window.dispatchEvent(new Event('resize')); });
-  Inertia.wave(cv, { y: 0.5, amp: innerWidth < 600 ? 0.24 : 0.3, speed: 1.4 });
+  if (Inertia.wave) Inertia.wave(cv, { y: 0.5, amp: innerWidth < 600 ? 0.24 : 0.3, speed: 1.4 });
 
   // 카드 위 빛이 마우스를 따라간다
   Array.prototype.forEach.call(document.querySelectorAll('.card'), function (c) {

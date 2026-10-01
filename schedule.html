@@ -12,8 +12,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=IBM+Plex+Sans+KR:wght@200;300;400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="site.css">
-<script src="site.js"></script>
+<link rel="stylesheet" href="site.css?v=20261001b">
+<script src="site.js?v=20261001b"></script>
 <style>
 :root{--tabs-h:50px}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
@@ -256,12 +256,12 @@ td.nw{white-space:nowrap}
 </footer>
 
 <button class="totop" type="button" aria-label="맨 위로"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
-<script src="schedule-data.js"></script>
+<script src="schedule-data.js?v=20261001b"></script>
 <script>
 (function () {
   'use strict';
   var D = window.SCHEDULE;
-  if (!D) { document.getElementById('app-error').hidden = false; return; }
+  if (!D || !window.Inertia) { document.getElementById('app-error').hidden = false; return; }
 
   var S = D.schedule, items = S.items, M = D.moves, L = D.lab;
   var CAT = { lab: '실험실', meet: '대면', solo: '구글챗·개인', due: '마감·주문', event: '행사' };
@@ -314,7 +314,7 @@ td.nw{white-space:nowrap}
   }
 
   /* ---------- 머리 ---------- */
-  var tidy = Inertia.tidy;
+  var tidy = Inertia.tidy || function (t) { return String(t || '').trim(); };
   $('#sub').textContent = tidy(S.subtitle);
   $('#rule').textContent = tidy(S.rule);
   var legendParts = S.legend.split('|');
@@ -638,7 +638,7 @@ td.nw{white-space:nowrap}
     top.style.setProperty('--wt', Math.round(r.top - tr.top + r.height / 2 - hh / 2) + 'px');
   }
   placeWave(); window.addEventListener('resize', placeWave);
-  Inertia.wave(cv, { y: 0.5, amp: 0.3, speed: 1.2 });
+  if (Inertia.wave) Inertia.wave(cv, { y: 0.5, amp: 0.3, speed: 1.2 });
 
   /* 진행 막대와 위로 버튼 */
   var bar = $('.progress i'), totop = $('.totop'), ticking = false;
