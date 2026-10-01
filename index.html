@@ -8,242 +8,98 @@
 <meta property="og:title" content="Inertia">
 <meta property="og:description" content="빛을 쓰지 않고 빛의 속력을 잰다. 공부자료와 준비 일정.">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="#07090A">
+<meta name="theme-color" content="#F4F6F1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111510" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Gowun+Batang:wght@400;700&family=IBM+Plex+Sans+KR:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="site.css?v=20261001b">
-<script src="site.js?v=20261001b"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=IBM+Plex+Sans+KR:wght@300;400;500;600&display=swap">
+<script>
+  // 다른 페이지에서 고른 화면 모드(라이트/다크)를 그대로 따른다
+  try { var m = localStorage.getItem('inertia-theme'); if (m) document.documentElement.setAttribute('data-theme', m); } catch (e) {}
+</script>
 <style>
-html,body{background:#07090A}
-.home{min-height:100vh;min-height:100svh;display:flex;flex-direction:column}
-.home>.wrap{width:100%}
-.home .wave{top:var(--wt,0px);height:var(--wh,320px)}
-
-.hbar{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:20px;font:500 11.5px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--ink3)}
-.hbar .logo{display:inline-flex;align-items:center;gap:10px;color:var(--ink)}
-.hbar .logo i{width:8px;height:8px;border-radius:50%;background:var(--light);box-shadow:0 0 14px 3px rgba(195,164,236,.7)}
-
-.stage{flex:1;display:flex;flex-direction:column;justify-content:center;padding-block:clamp(8px,4vh,48px) clamp(28px,5vh,56px)}
-.wordmark{
-  font-family:'Instrument Serif',var(--serif);font-weight:400;
-  font-size:clamp(92px,17vw,220px);line-height:.86;letter-spacing:-.025em;
-  margin:clamp(6px,1.4vh,14px) 0 0 -.04em;
-  background:linear-gradient(100deg,#F3F4F0 0%,#F3F4F0 38%,#E4D4FF 47%,#FFFFFF 50%,#E4D4FF 53%,#F3F4F0 62%,#F3F4F0 100%);
-  background-size:280% 100%;background-position:100% 0;
-  -webkit-background-clip:text;background-clip:text;color:transparent;
-  animation:reveal 1.4s cubic-bezier(.2,.7,.1,1) both,sheen 7s 1.6s ease-in-out infinite;
+/* 이 페이지는 다른 파일 없이 혼자 그려진다. 배경색과 글자색을 한곳에서 정한다. */
+:root{
+  --bg:#F4F6F1; --card:#FFFFFF; --ink:#191E1A; --ink2:#4B564F; --ink3:#6F7A72; --rule:#D9DED5;
+  --blue:#1B5A8B; --rust:#A6411B;
+  --sans:'IBM Plex Sans KR',system-ui,-apple-system,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;
+  --display:'Instrument Serif','Times New Roman',serif;
 }
-@keyframes reveal{from{opacity:0;filter:blur(18px);letter-spacing:.06em;transform:translateY(18px)}to{opacity:1;filter:blur(0);letter-spacing:-.025em;transform:none}}
-@keyframes sheen{0%,55%{background-position:100% 0}100%{background-position:0 0}}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#111510; --card:#191E1A; --ink:#ECEFE9; --ink2:#B4BDB6; --ink3:#8E978F; --rule:#2E352F;
+    --blue:#7DBBE8; --rust:#EE9A76;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#111510; --card:#191E1A; --ink:#ECEFE9; --ink2:#B4BDB6; --ink3:#8E978F; --rule:#2E352F;
+  --blue:#7DBBE8; --rust:#EE9A76;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink)}
+body{font-family:var(--sans);font-weight:400;-webkit-text-size-adjust:100%;word-break:keep-all}
 
-.lead{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 22px;margin-top:clamp(14px,2.4vh,24px)}
-.tagline{font-family:var(--serif);font-weight:700;font-size:clamp(20px,3vw,30px);line-height:1.35;margin:0;color:var(--ink)}
-.formula{font:400 clamp(14px,1.6vw,17px) var(--mono);color:var(--light);margin:0;letter-spacing:.02em}
-.small{margin:6px 0 0;color:var(--ink2);font-size:clamp(14.5px,1.5vw,16px);text-wrap:pretty}
+.home{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:48px 20px}
+.wordmark{font-family:var(--display);font-weight:400;font-size:clamp(84px,17vw,168px);line-height:1;letter-spacing:-.02em;margin:0;color:var(--ink)}
+.tag{margin:14px 0 0;font-size:clamp(16px,2.4vw,19px);color:var(--ink2)}
 
-.live{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:clamp(20px,3.4vh,34px);border-block:1px solid var(--rule)}
-.lv{min-width:0;padding:14px 18px 13px 0}
-.lv+.lv{padding-left:18px;border-left:1px solid var(--rule)}
-.lv .k{display:block;font:500 12px var(--sans);letter-spacing:.02em;color:var(--ink3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.lv b{display:block;font:500 clamp(20px,2.6vw,28px) var(--mono);font-variant-numeric:tabular-nums;letter-spacing:-.01em;color:var(--ink);margin-top:3px;white-space:nowrap}
-.lv .u{display:block;font-size:13px;color:var(--ink2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.lv.c b{color:var(--light)}
-
-.choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(14px,1.8vw,22px);margin-top:clamp(20px,3.4vh,34px)}
-.card{
-  --acr:125,187,232;
-  position:relative;display:flex;flex-direction:column;gap:8px;min-width:0;
-  padding:clamp(20px,2.4vw,30px);border-radius:22px;
-  background:radial-gradient(420px circle at var(--mx,50%) var(--my,0%),rgba(var(--acr),.13),transparent 46%),rgba(255,255,255,.035);
-  border:1px solid rgba(255,255,255,.09);
-  -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
+.choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;width:100%;max-width:600px;margin-top:clamp(36px,7vh,56px)}
+.choice{
+  --ac:var(--blue);
+  display:flex;flex-direction:column;align-items:flex-start;gap:6px;
+  padding:24px 24px 22px;text-align:left;
+  background:var(--card);border:1px solid var(--rule);border-radius:16px;
   color:var(--ink);text-decoration:none;
-  transition:transform .35s cubic-bezier(.2,.7,.2,1),border-color .35s ease,box-shadow .35s ease;
-  animation:rise .9s cubic-bezier(.2,.7,.2,1) both;
+  transition:border-color .2s ease,transform .2s ease;
 }
-.card.plan{--acr:238,154,118}
-.card::before{
-  content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1px;pointer-events:none;
-  background:radial-gradient(240px circle at var(--mx,50%) var(--my,0%),rgba(var(--acr),.95),transparent 60%);
-  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;
-  mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0);
-  opacity:0;transition:opacity .35s ease;
-}
-.card:hover,.card:focus-visible{transform:translateY(-6px);box-shadow:0 30px 60px -30px rgba(var(--acr),.45);border-color:rgba(255,255,255,.14)}
-.card:hover::before,.card:focus-visible::before{opacity:1}
-.card .top{display:flex;justify-content:space-between;align-items:center}
-.card .idx{font:500 12px var(--mono);letter-spacing:.16em;color:var(--ink3)}
-.card svg{width:44px;height:44px;color:rgb(var(--acr));flex:none}
-.card h2{font-family:var(--serif);font-size:clamp(30px,3.6vw,42px);line-height:1.15;margin:8px 0 0}
-.card p{margin:0;color:var(--ink2);font-size:15.5px;line-height:1.65;max-width:30em}
-.card .bottom{margin-top:auto;padding-top:16px;display:flex;justify-content:space-between;align-items:center;gap:12px;font:500 12px var(--mono);letter-spacing:.06em;color:var(--ink3)}
-.card .go{flex:none;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;border:1px solid rgba(var(--acr),.45);color:rgb(var(--acr));transition:background .3s ease,color .3s ease,transform .35s cubic-bezier(.2,.7,.2,1)}
-.card .go svg{width:18px;height:18px;color:inherit}
-.card:hover .go,.card:focus-visible .go{background:rgb(var(--acr));color:#07090A;transform:translateX(3px)}
+.choice.plan{--ac:var(--rust)}
+.choice:hover,.choice:focus-visible{border-color:var(--ac);transform:translateY(-2px)}
+.choice:focus-visible{outline:2px solid var(--ac);outline-offset:3px}
+.choice .t{display:flex;align-items:center;justify-content:space-between;width:100%;font-size:24px;font-weight:600;letter-spacing:-.01em}
+.choice .t::after{content:"\2192";font-weight:400;color:var(--ac);transition:transform .2s ease}
+.choice:hover .t::after,.choice:focus-visible .t::after{transform:translateX(4px)}
+.choice .d{font-size:15px;line-height:1.55;color:var(--ink2)}
 
-.next{display:inline-flex;align-items:center;gap:12px;max-width:100%;margin-top:18px;padding:9px 16px 9px 12px;border:1px solid var(--rule);border-radius:999px;background:rgba(255,255,255,.03);color:var(--ink2);font-size:14px;text-decoration:none;align-self:flex-start;animation:rise .9s .5s cubic-bezier(.2,.7,.2,1) both}
-.next b{font:600 12px var(--sans);letter-spacing:.02em;color:#07090A;background:var(--mag);border-radius:999px;padding:3px 9px;white-space:nowrap}
-.next span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.next:hover,.next:focus-visible{border-color:rgba(255,255,255,.3);color:var(--ink)}
-.next[hidden]{display:none}
+.meta{margin:clamp(28px,5vh,40px) 0 0;font-size:14px;color:var(--ink3)}
+.meta b{font-weight:600;color:var(--ink)}
 
-.hfoot{padding-block:18px 22px;font-size:12.5px;color:var(--ink3);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-.hfoot p{margin:0}
-
-@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
-.stage .eyebrow{letter-spacing:.08em}
-.eyebrow{animation:rise .9s .05s cubic-bezier(.2,.7,.2,1) both}
-.lead{animation:rise .9s .35s cubic-bezier(.2,.7,.2,1) both}
-.small{animation:rise .9s .42s cubic-bezier(.2,.7,.2,1) both}
-.live{animation:rise .9s .5s cubic-bezier(.2,.7,.2,1) both}
-.choices .card:nth-child(1){animation-delay:.6s}
-.choices .card:nth-child(2){animation-delay:.68s}
-
-@media (max-width:760px){
+.home>*{animation:in .6s ease both}
+.home>.tag{animation-delay:.08s}
+.home>.choices{animation-delay:.16s}
+.home>.meta{animation-delay:.24s}
+@keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.home>*{animation:none}.choice,.choice .t::after{transition:none}}
+@media (max-width:520px){
   .choices{grid-template-columns:1fr}
-  .live{grid-template-columns:1fr}
-  .lv,.lv+.lv{padding:11px 0;border-left:0}
-  .lv+.lv{border-top:1px solid var(--rule)}
-  .lv{display:grid;grid-template-columns:1fr auto;align-items:baseline;gap:0 12px}
-  .lv .k{grid-column:1/-1}
-  .lv b{font-size:22px}
-  .lv .u{text-align:right}
-  .card h2{font-size:30px}
+  .choice{padding:20px}
 }
 </style>
 </head>
 <body>
-<a class="skip" href="#choose">메뉴로 건너뛰기</a>
-<div class="home night">
-  <canvas class="wave" id="wave" aria-hidden="true"></canvas>
+<main class="home">
+  <h1 class="wordmark">Inertia</h1>
+  <p class="tag">빛을 쓰지 않고 빛의 속력을 잰다</p>
 
-  <header class="hbar wrap">
-    <span class="logo"><i aria-hidden="true"></i>Inertia</span>
-    <span>2026 POLARIS</span>
-  </header>
+  <nav class="choices" aria-label="보고 싶은 자료 고르기">
+    <a class="choice study" href="study.html">
+      <span class="t">공부자료</span>
+      <span class="d">기초 개념, 실험 세 가지, 데이터 분석, 예상 질문</span>
+    </a>
+    <a class="choice plan" href="schedule.html">
+      <span class="t">일정</span>
+      <span class="d">10월 17일부터 11월 7일까지 날짜별 할 일</span>
+    </a>
+  </nav>
 
-  <main class="stage wrap">
-    <p class="eyebrow">북일고등학교 학술교류 포럼 · 11월 7일</p>
-    <h1 class="wordmark">Inertia</h1>
-    <div class="lead">
-      <p class="tagline">빛을 쓰지 않고, 빛의 속력을 잰다.</p>
-      <p class="formula">c = 1 / √(μ₀ε₀)</p>
-    </div>
-    <p class="small">축전기와 직접 감은 코일, 그리고 자와 시계만 쓴다.</p>
-
-    <div class="live" aria-label="숫자로 보는 지금">
-      <div class="lv c"><span class="k">빛의 속력</span><b>299,792,458</b><span class="u">m/s, 정의값</span></div>
-      <div class="lv"><span class="k">발표까지</span><b id="dday">D-37</b><span class="u" id="ddsub">11/7(토) 북일고등학교</span></div>
-      <div class="lv"><span class="k">이 화면을 연 뒤 빛이 간 거리</span><b id="trip">0 km</b><span class="u" id="tripsub">지구 0바퀴</span></div>
-    </div>
-
-    <nav id="choose" class="choices" aria-label="보고 싶은 자료 고르기">
-      <a class="card study" href="study.html">
-        <span class="top">
-          <span class="idx">01 · STUDY</span>
-          <svg viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
-            <path d="M8 18h40M8 38h40"/>
-            <path d="M16 18v20M28 18v20M40 18v20" stroke-width="1.4" stroke-dasharray="2 4"/>
-            <path d="M28 6v12M28 38v12" stroke-width="1.6"/>
-          </svg>
-        </span>
-        <h2>공부자료</h2>
-        <p>전자기학 기초부터 실험 세 가지, 데이터 분석, 발표 준비, 예상 질문 39개까지.</p>
-        <span class="bottom"><span>개정판 · 2026.9</span><span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
-      </a>
-      <a class="card plan" href="schedule.html">
-        <span class="top">
-          <span class="idx">02 · SCHEDULE</span>
-          <svg viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
-            <rect x="8" y="12" width="40" height="36" rx="4"/>
-            <path d="M8 22h40M18 8v8M38 8v8"/>
-            <circle cx="19" cy="31" r="2" fill="currentColor" stroke="none"/>
-            <circle cx="28" cy="31" r="2" fill="currentColor" stroke="none"/>
-            <circle cx="37" cy="31" r="2" fill="currentColor" stroke="none"/>
-            <circle cx="19" cy="40" r="2" fill="currentColor" stroke="none"/>
-            <circle cx="28" cy="40" r="3.2" fill="currentColor" stroke="none"/>
-          </svg>
-        </span>
-        <h2>일정</h2>
-        <p>10월 17일부터 발표 날까지. 날짜마다 할 일, 장소, 담당이 있고, 끝낸 일은 체크해 둘 수 있다.</p>
-        <span class="bottom"><span id="plan-meta">10/17 – 11/7</span><span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
-      </a>
-    </nav>
-
-    <a class="next" id="next" hidden><b>다음 일정</b><span id="next-t"></span></a>
-  </main>
-
-  <footer class="hfoot wrap">
-    <p>Inertia · 2026 POLARIS 학술교류 포럼</p>
-    <p>299,792,458 m/s는 1983년부터 정의로 고정된 값이다.</p>
-  </footer>
-</div>
-
-<script src="schedule-data.js?v=20261001b"></script>
+  <p class="meta">11월 7일 북일고등학교 발표 <b id="dday"></b></p>
+</main>
 <script>
-(function () {
-  if (!window.Inertia) return;
-  // 파동이 큰 글씨의 한가운데를 지나가도록 캔버스 위치를 맞춘다
-  var wm = document.querySelector('.wordmark'), home = document.querySelector('.home'), cv = document.getElementById('wave');
-  function placeWave() {
-    var r = wm.getBoundingClientRect(), hr = home.getBoundingClientRect();
-    var hh = Math.max(220, r.height * 1.7);
-    home.style.setProperty('--wh', Math.round(hh) + 'px');
-    home.style.setProperty('--wt', Math.round(r.top - hr.top + r.height * 0.52 - hh / 2) + 'px');
-  }
-  placeWave();
-  window.addEventListener('resize', placeWave);
-  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { placeWave(); window.dispatchEvent(new Event('resize')); });
-  if (Inertia.wave) Inertia.wave(cv, { y: 0.5, amp: innerWidth < 600 ? 0.24 : 0.3, speed: 1.4 });
-
-  // 카드 위 빛이 마우스를 따라간다
-  Array.prototype.forEach.call(document.querySelectorAll('.card'), function (c) {
-    c.addEventListener('pointermove', function (e) {
-      var r = c.getBoundingClientRect();
-      c.style.setProperty('--mx', (e.clientX - r.left) + 'px');
-      c.style.setProperty('--my', (e.clientY - r.top) + 'px');
-    });
-  });
-
-  // 이 화면을 연 뒤 빛이 간 거리
-  var trip = document.getElementById('trip'), tripSub = document.getElementById('tripsub');
-  var t0 = performance.now(), last = 0;
-  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function paintTrip(now) {
-    var km = (now - t0) / 1000 * 299792.458;
-    trip.textContent = Math.floor(km).toLocaleString('ko-KR') + ' km';
-    var laps = km / 40075;
-    tripSub.textContent = laps < 100 ? '지구 ' + laps.toFixed(1) + '바퀴' : '달까지 ' + Math.floor(km / 384400).toLocaleString('ko-KR') + '번 갈 거리';
-  }
-  function tick(now) {
-    if (now - last > 50) { last = now; paintTrip(now); }
-    requestAnimationFrame(tick);
-  }
-  if (reduce) setInterval(function () { paintTrip(performance.now()); }, 1000); else requestAnimationFrame(tick);
-
-  var data = window.SCHEDULE;
-  if (!data) return;
-  var items = data.schedule.items, today = Inertia.todayISO();
-
-  var left = Inertia.daysBetween(today, data.event.date);
-  var p = data.event.date.split('-');
-  document.getElementById('dday').textContent = left < 0 ? '끝' : Inertia.ddayLabel(left);
-  document.getElementById('ddsub').textContent = (+p[1]) + '/' + (+p[2]) + '(' + Inertia.weekday(data.event.date) + ') ' + data.event.place;
-
-  var first = items[0], lastItem = items[items.length - 1];
-  document.getElementById('plan-meta').textContent = items.length + '칸 · ' + first.md + ' – ' + lastItem.md;
-
-  var next = Inertia.nextItem(items);
-  if (next) {
-    var a = document.getElementById('next');
-    a.href = 'schedule.html#' + next.date;
-    var when = next.date === today ? '오늘' : next.md + '(' + next.wd + ')';
-    document.getElementById('next-t').textContent = when + ' ' + next.slot + ' · ' + Inertia.firstChunk(next.task);
-    a.hidden = false;
-  }
-})();
+  (function () {
+    var t = new Date(), a = Date.UTC(t.getFullYear(), t.getMonth(), t.getDate()), b = Date.UTC(2026, 10, 7);
+    var n = Math.round((b - a) / 864e5);
+    document.getElementById('dday').textContent = n > 0 ? '· D-' + n : (n === 0 ? '· 오늘' : '');
+  })();
 </script>
 </body>
 </html>
