@@ -312,17 +312,17 @@ figure foreignObject math.d{math-style:normal}
   <div class="wrap">
     <p class="eyebrow">Inertia · 학술교류 포럼 특수 세션 · 공부자료</p>
     <h1>한쪽으로만 도는 물체,<br><span class="accent">래틀백</span></h1>
-    <p class="lede">래틀백은 한쪽으로 돌리면 잘 돌고, 반대로 돌리면 몇 번 덜컹거리다 스스로 방향을 바꾼다. 물리 법칙은 왼쪽과 오른쪽을 구별하지 않는데 이 물체는 한 방향을 고른다. 우리는 숟가락과 동전으로 래틀백을 만들고, 무게추를 비트는 각도를 바꿔 가며 그 이유를 잰다.</p>
+    <p class="lede">래틀백은 한쪽으로 돌리면 잘 돌고, 반대로 돌리면 덜컹거리다 스스로 방향을 바꾼다. 우리는 3D 프린터로 큰 래틀백을 만들고, 위에 얹은 막대를 몇 도 틀어 놓느냐에 따라 래틀백이 어느 쪽을 좋아하는지 잰다.</p>
     <div class="formulas">
-      <div class="formula-hero"><math class="d" displaystyle="true"><semantics><mrow><mi mathvariant="normal">tan</mi><mspace width="0.17em"></mspace><mn>2</mn><mi>θ</mi><mo>=</mo><mfrac><mrow><mn>2</mn><mi>m</mi><msup><mi>a</mi><mn>2</mn></msup><mi mathvariant="normal">sin</mi><mspace width="0.17em"></mspace><mn>2</mn><mi>δ</mi></mrow><mrow><msub><mi>D</mi><mn>0</mn></msub><mo>+</mo><mn>2</mn><mi>m</mi><msup><mi>a</mi><mn>2</mn></msup><mi mathvariant="normal">cos</mi><mspace width="0.17em"></mspace><mn>2</mn><mi>δ</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\tan\,2\theta = \frac{2ma^2\sin\,2\delta}{D_0 + 2ma^2\cos\,2\delta}</annotation></semantics></math><small>무게추를 δ만큼 비틀면 질량의 축이 θ만큼 돌아간다</small></div>
+      <div class="formula-hero"><math class="d" displaystyle="true"><semantics><mrow><mtext>막대를 튼 각도</mtext><mspace width="0.28em"></mspace><mo>→</mo><mspace width="0.28em"></mspace><mtext>좋아하는 방향</mtext></mrow><annotation encoding="application/x-tex">\text{막대를 튼 각도}\;\to\;\text{좋아하는 방향}</annotation></semantics></math><small>왼쪽으로 틀면 한쪽, 오른쪽으로 틀면 반대쪽</small></div>
     </div>
     <div class="howto">
-      <div><b>0부는 전원이 먼저</b>무엇을 하는지, 특수 세션에서 무엇을 보여 줄지.</div>
-      <div><b>1부는 다 같이</b>회전, 관성 모멘트, 구름 조건, 결합 진동. 래틀백을 설명하는 데 필요한 것만.</div>
-      <div><b>2·3부는 만들기와 측정</b>δ를 바꿀 수 있는 래틀백 만들기, 촬영과 Tracker 분석.</div>
-      <div><b>4부는 시연 담당</b>청중이 직접 예측하고 돌려 보는 참여형 시연.</div>
-      <div><b>5·6·7부는 측정 후</b>데이터 분석, 20분 발표 구성, 토의 질문과 예상 질문.</div>
-      <div><b>실험 당일에는</b>"값이 이상할 때" 표와 부록 E의 기록지를 인쇄해 간다.</div>
+      <div><b>0부는 전원이 먼저</b>무엇을 하는지, 발표에서 무엇을 보여 줄지.</div>
+      <div><b>1부는 다 같이</b>래틀백이 왜 방향을 바꾸는지 쉬운 말로.</div>
+      <div><b>2·3부는 만들기와 측정</b>3D 프린터로 출력하기, 영상으로 회전 재기.</div>
+      <div><b>4부는 시연 담당</b>청중이 직접 예측하고 돌려 보는 시연.</div>
+      <div><b>5·6·7부는 측정 후</b>결과 정리, 20분 발표, 토의 질문과 예상 질문.</div>
+      <div><b>실험 당일에는</b>"값이 이상할 때" 표와 부록 C의 기록지를 인쇄해 간다.</div>
     </div>
   </div>
 </header>
@@ -335,7 +335,7 @@ figure foreignObject math.d{math-style:normal}
     <a href="#s3">3 · 측정</a>
     <a href="#s4c">4 · 현장 시연</a>
     <a href="#s35">문제 해결</a>
-    <a href="#s4">5 · 데이터 분석</a>
+    <a href="#s4">5 · 결과 정리</a>
     <a href="#s5">6 · 발표</a>
     <a href="#s6">7 · 토의·예상 질문</a>
     <a href="#s7">부록</a>
@@ -347,13 +347,21 @@ figure foreignObject math.d{math-style:normal}
   <div class="wrap">
     <p class="part">0부 <span class="new">특수 세션</span></p>
     <h2>이 탐구가 무엇을 하는가</h2>
-    <p class="sub">0부만 읽어도 발표 도입부와 "우리가 무엇을 재는지"를 말할 수 있다.</p>
+    <p class="sub">0부만 읽어도 발표 첫 부분을 말할 수 있다.</p>
 
-    <p>래틀백(rattleback)은 바닥이 둥근 길쭉한 물체다. 책상 위에서 한쪽으로 돌리면 몇 초 동안 매끄럽게 돈다. 반대쪽으로 돌리면 금방 앞뒤로 덜컹거리기 시작하고, 회전이 멈춘 뒤 원래 좋아하던 방향으로 다시 돈다. 영어 이름은 이 덜컹거림(rattle)에서, 다른 이름인 켈트 돌(celt)은 선사 시대 돌도끼를 가리키는 고고학 용어에서 왔다. 19세기 말 돌도끼 가운데 이렇게 도는 것이 있다는 보고가 있었고, 1896년 길버트 워커가 처음 이론으로 다뤘다.</p>
-    <p>신기한 점은 뉴턴 역학의 법칙에 왼쪽과 오른쪽의 구별이 없다는 데 있다. 법칙이 방향을 고르지 않는데 물체가 방향을 고른다. 그렇다면 그 선택은 물체의 모양 어딘가에 들어 있어야 한다. 우리 탐구는 그 "어딘가"를 우리 손으로 만들고 바꿔 보는 것이다.</p>
+    <h3>0.1 래틀백이란</h3>
+    <p>길쭉하고 바닥이 둥근 물체다. 책상 위에서 한쪽으로 돌리면 잘 돈다. 반대쪽으로 돌리면 덜컹덜컹 흔들리다가 멈추고, 혼자서 원래 쪽으로 다시 돈다. 마치 "나는 이쪽이 좋아" 하고 고집을 부리는 것 같다. 이름은 덜컹거린다(rattle)는 뜻에서 왔다.</p>
+    <p>보통 물체는 왼쪽으로 돌리든 오른쪽으로 돌리든 똑같이 돈다. 팽이도 동전도 그렇다. 물리 법칙에는 왼쪽과 오른쪽의 차이가 없다. 그런데 래틀백만 한쪽을 고른다. 그 이유를 찾는 것이 이 탐구다.</p>
+
+    <h3>0.2 우리 래틀백</h3>
+    <p>3D 프린터로 두 부품을 뽑는다.</p>
+    <ul class="plain">
+      <li><strong>바닥:</strong> 길쭉한 그릇을 엎어 놓은 모양. 길이 18 cm, 폭 6 cm.</li>
+      <li><strong>막대(팔):</strong> 바닥 위에 볼트 하나로 고정한다. 양 끝에 500원 동전을 올린다. 볼트를 살짝 풀면 시곗바늘처럼 돌릴 수 있다.</li>
+    </ul>
 
     <figure>
-      <svg viewBox="0 0 720 260" role="img" aria-label="위에서 본 래틀백. 숟가락의 긴 축과 무게추 막대가 각도 델타만큼 어긋나 있다">
+      <svg viewBox="0 0 720 260" role="img" aria-label="위에서 본 래틀백. 바닥의 긴 축과 무게추 막대가 각도 델타만큼 어긋나 있다">
   <ellipse cx="250" cy="130" rx="190" ry="72" class="Lb" style="fill-opacity:.35"/>
   <line x1="40" y1="130" x2="460" y2="130" class="kd"/>
   <text class="sm" x="466" y="134">바닥의 긴 축</text>
@@ -373,38 +381,35 @@ figure foreignObject math.d{math-style:normal}
   <text class="sm" x="560" y="206">−δ: 거울상</text>
 </svg>
 
-      <figcaption><b>그림 0-1</b>위에서 본 래틀백. 점선은 바닥 모양이 정하는 긴 축이다. 막대와 무게추를 이 축에서 δ만큼 비틀어 붙이면 질량이 정하는 축도 따라 돌아간다. 두 축이 어긋나야 래틀백이 된다.</figcaption>
+      <figcaption><b>그림 0-1</b>위에서 본 우리 래틀백. 점선은 바닥의 긴 방향이다. 막대를 이 선에서 몇 도 틀어 놓았는지가 <b>팔 각도 δ(델타)</b>다.</figcaption>
     </figure>
 
-    <h3>0.1 특수 세션에서 할 일</h3>
+    <p>시계로 생각하면 쉽다. 바닥의 긴 방향이 12시와 6시를 잇는 선이고, 막대가 시곗바늘이다.</p>
     <ul class="plain">
-      <li><strong>발표 PPT 20분 이내.</strong> 구성은 6부에 있다.</li>
-      <li><strong>현장 시연 1개 이상.</strong> 래틀백 여러 개를 가져가 청중이 직접 방향을 예측하고 돌려 보게 한다. 순서는 4부에 있다.</li>
-      <li><strong>토의용 핵심 질문 1~2개.</strong> 원리, 설계, 한계를 하나씩 건드리는 질문을 7부 맨 앞에 정리했다.</li>
+      <li>바늘을 12시에 맞추면(0°) 래틀백은 고집이 없다. 어느 쪽으로 돌려도 그냥 돈다.</li>
+      <li>바늘을 왼쪽으로 조금 돌리면(+) 한쪽 방향을 좋아한다.</li>
+      <li>바늘을 오른쪽으로 조금 돌리면(−) 반대 방향을 좋아한다.</li>
     </ul>
+    <p>동전 개수는 방향이 아니라 고집의 세기를 정한다. 동전이 많을수록 더 빨리 마음을 바꿀 것으로 예상한다. 동전은 항상 양쪽에 같은 개수로 올린다.</p>
 
-    <h3>0.2 우리 팀의 질문</h3>
-    <p class="question">래틀백이 고르는 방향은 정확히 무엇이 정하는가? 그 "무엇"을 0으로 만들면 선택도 사라지는가?</p>
-    <p>시판 래틀백은 비틀림이 몸체 안에 굳어 있어서 바꿀 수 없다. 우리는 숟가락 위에 무게추 막대를 붙이고, 막대를 비트는 각도 δ를 0°부터 30°까지, 그리고 반대쪽으로 바꿔 가며 같은 실험을 되풀이한다. 그러면 세 가지를 확인할 수 있다.</p>
+    <h3>0.3 우리 팀의 질문</h3>
+    <p class="question">래틀백의 고집은 무엇이 만드는가? 그것을 없애면 고집도 사라지는가?</p>
+    <p>막대 각도 하나만 바꿔 가며 같은 실험을 되풀이해서 세 가지를 확인한다.</p>
     <ol class="plain">
-      <li>δ = 0°이면 뒤집힘이 사라지는가.</li>
-      <li>δ의 부호를 바꾸면(거울상) 좋아하는 방향도 바뀌는가.</li>
-      <li>δ가 커질수록 뒤집힘이 얼마나 빨라지는가.</li>
+      <li>0°에서는 고집이 사라지는가.</li>
+      <li>+와 −를 바꾸면 좋아하는 방향도 바뀌는가.</li>
+      <li>많이 틀수록 더 빨리 마음을 바꾸는가.</li>
     </ol>
 
-    <h3>0.3 우리가 더한 것</h3>
-    <ol class="plain">
-      <li><strong>비틀림 각을 변수로 만들었다.</strong> 같은 몸체에서 δ만 바꿔 재므로 다른 요인이 섞이지 않는다.</li>
-      <li><strong>거울상 쌍으로 대칭을 직접 확인한다.</strong> +δ와 −δ 래틀백을 나란히 두고 비교한다.</li>
-      <li><strong>바닥을 바꿔 마찰의 역할을 잰다.</strong> 미끄러운 바닥에서 뒤집힘이 약해지는지 본다. 마찰이 없으면 래틀백도 없다는 주장을 실험으로 확인한다.</li>
-    </ol>
-    <div class="note l">
-      <span class="tagline">발표에서 쓸 한 줄</span>
-      "숟가락 위 막대를 몇 도 비트느냐로, 물체가 어느 쪽으로 돌기를 좋아하는지를 저희가 정할 수 있었습니다."
-    </div>
+    <h3>0.4 특수 세션에서 할 일</h3>
+    <ul class="plain">
+      <li><strong>발표 PPT 20분 이내.</strong> 구성은 6부.</li>
+      <li><strong>현장 시연.</strong> 청중이 먼저 방향을 예측하고 직접 돌려 본다. 4부.</li>
+      <li><strong>토의 질문 2개.</strong> 7부 맨 앞.</li>
+    </ul>
     <div class="note e">
       <span class="tagline">발표 첫 문장으로 쓸 만한 것</span>
-      "지금부터 이 숟가락을 시계 반대 방향으로 돌려 보겠습니다. 3초 뒤에 이 숟가락은 마음을 바꿉니다."
+      "지금 이 물체를 시계 반대 방향으로 돌려 보겠습니다. 3초 뒤에 이 물체는 마음을 바꿉니다."
     </div>
   </div>
 </section>
@@ -412,49 +417,34 @@ figure foreignObject math.d{math-style:normal}
 <section id="s1">
   <div class="wrap">
     <p class="part">1부</p>
-    <h2>기초 개념: 회전에서 결합 진동까지</h2>
-    <p class="sub">회전 운동을 처음 보는 사람 기준이다. 순서대로 읽는다. 1.6절까지 오면 래틀백이 왜 방향을 바꾸는지 말로 설명할 수 있다.</p>
+    <h2>기초 개념: 래틀백은 왜 마음을 바꿀까</h2>
+    <p class="sub">처음 보는 사람 기준으로 썼다. 식은 꼭 필요한 것만, 상자 안에 따로 넣었다.</p>
 
-    <h3>1.1 각속도와 각운동량</h3>
-    <p>회전의 빠르기는 <strong>각속도</strong> ω로 나타낸다. 1초에 몇 라디안 도는지를 뜻하고, 단위는 rad/s다. 1초에 한 바퀴 돌면 <math><semantics><mrow><mi>ω</mi><mo>=</mo><mn>2</mn><mi>π</mi></mrow><annotation encoding="application/x-tex">\omega = 2\pi</annotation></semantics></math> rad/s ≈ 6.28 rad/s다. 우리 실험에서는 위에서 내려다볼 때 시계 반대 방향을 +, 시계 방향을 −로 정한다.</p>
-    <p>직선 운동의 운동량 <math><semantics><mrow><mi>p</mi><mo>=</mo><mi>m</mi><mi>v</mi></mrow><annotation encoding="application/x-tex">p = mv</annotation></semantics></math>에 해당하는 것이 <strong>각운동량</strong>이다. 축 하나로만 돌 때는 다음처럼 쓴다.</p>
-    <div class="eq"><math class="d" displaystyle="true"><semantics><mrow><mi>L</mi><mo>=</mo><mi>I</mi><mi>ω</mi></mrow><annotation encoding="application/x-tex">L = I\omega</annotation></semantics></math><br><span class="c">I는 관성 모멘트(1.2절). 바깥에서 돌림힘이 없으면 L은 변하지 않는다</span></div>
-    <p>이것이 각운동량 보존이다. 피겨 선수가 팔을 오므리면 빨리 도는 이유다. 래틀백은 회전 방향이 바뀌므로 L의 부호가 바뀐다. 그러니 래틀백에는 반드시 바깥에서 돌림힘이 작용하고 있다. 그 돌림힘을 주는 것이 책상이다(1.4절).</p>
+    <h3>1.1 도는 물체는 계속 돌고 싶어 한다</h3>
+    <p>굴러가는 공이 계속 굴러가려 하듯, 도는 물체는 계속 같은 방향으로 돌려고 한다. 이 "돌고 있는 양"을 <strong>각운동량</strong>이라 한다. 바깥에서 비트는 힘(돌림힘)이 없으면 각운동량은 변하지 않는다.</p>
+    <p>래틀백은 도는 방향이 바뀐다. 각운동량이 바뀐 것이다. 그러니 누군가 래틀백을 비틀고 있다는 뜻이다. 그 누군가는 바로 <strong>책상</strong>이다(1.5절).</p>
 
-    <h3>1.2 관성 모멘트와 관성 텐서</h3>
-    <p><strong>관성 모멘트</strong>는 회전을 바꾸기 어려운 정도다. 질량이 축에서 멀리 있을수록 크다.</p>
-    <div class="eq"><math class="d" displaystyle="true"><semantics><mrow><mi>I</mi><mo>=</mo><mo>∑</mo><mi>m</mi><msup><mi>r</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">I = \sum m r^2</annotation></semantics></math><br><span class="c">r은 각 질량 조각과 회전축 사이의 거리</span></div>
-    <p>그런데 3차원 물체는 어느 축으로 도느냐에 따라 I가 다르다. 길쭉한 숟가락은 긴 축을 중심으로 돌리기 쉽고, 짧은 축을 중심으로 돌리기 어렵다. 이 정보를 한꺼번에 담은 것이 <strong>관성 텐서</strong>다. 수평면에서 x축(긴 방향)과 y축(짧은 방향)을 잡으면 다음 세 값이 들어간다.</p>
-    <div class="eq"><math class="d" displaystyle="true"><semantics><mrow><msub><mi>I</mi><mrow><mi>x</mi><mi>x</mi></mrow></msub><mo>=</mo><mo>∑</mo><mi>m</mi><mo>(</mo><msup><mi>y</mi><mn>2</mn></msup><mo>+</mo><msup><mi>z</mi><mn>2</mn></msup><mo>)</mo><mspace width="2em"></mspace><msub><mi>I</mi><mrow><mi>y</mi><mi>y</mi></mrow></msub><mo>=</mo><mo>∑</mo><mi>m</mi><mo>(</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>z</mi><mn>2</mn></msup><mo>)</mo><mspace width="2em"></mspace><msub><mi>I</mi><mrow><mi>x</mi><mi>y</mi></mrow></msub><mo>=</mo><mo>−</mo><mo>∑</mo><mi>m</mi><mspace width="0.17em"></mspace><mi>x</mi><mi>y</mi></mrow><annotation encoding="application/x-tex">I_{xx} = \sum m(y^2 + z^2) \qquad I_{yy} = \sum m(x^2 + z^2) \qquad I_{xy} = -\sum m\,xy</annotation></semantics></math></div>
-    <p>마지막 <math><semantics><mrow><msub><mi>I</mi><mrow><mi>x</mi><mi>y</mi></mrow></msub></mrow><annotation encoding="application/x-tex">I_{xy}</annotation></semantics></math>를 <strong>관성 곱</strong>이라 한다. 질량이 x축과 y축에 대해 대칭으로 놓여 있으면 xy가 + 인 조각과 − 인 조각이 상쇄되어 0이 된다. 무게추를 비스듬히 붙이면 상쇄가 깨져 0이 아니게 된다.</p>
-    <p>관성 곱이 0이 되도록 축을 돌린 방향을 <strong>주축</strong>이라 한다. 주축으로 돌 때만 각운동량이 회전축과 같은 방향을 향한다. 주축이 아닌 축으로 돌리면 각운동량이 비스듬히 기울고, 물체가 흔들린다.</p>
+    <h3>1.2 무게가 어디 있느냐가 중요하다</h3>
+    <p>같은 무게라도 가운데 모여 있으면 잘 돌고, 바깥에 퍼져 있으면 잘 안 돈다. 피겨 선수가 팔을 오므리면 빨리 도는 이유다. 이렇게 "돌리기 어려운 정도"를 <strong>관성 모멘트</strong>라 한다.</p>
+    <p>길쭉한 물체는 방향마다 돌리기 어려운 정도가 다르다. 그래서 물체마다 무게가 정해 주는 "축"이 있다. 동전을 얹은 막대를 돌려 놓으면 이 무게의 축도 같이 돌아간다.</p>
 
-    <h3>1.3 무게추를 비틀면 주축이 얼마나 돌아가나</h3>
-    <p>질량 m인 무게추 두 개를 막대 양 끝(중심에서 거리 a)에 붙이고, 막대를 긴 축에서 δ만큼 비틀었다고 하자. 무게추 좌표는 <math><semantics><mrow><mo>(</mo><mi>a</mi><mi mathvariant="normal">cos</mi><mi>δ</mi><mo>,</mo><mspace width="0.25em"></mspace><mi>a</mi><mi mathvariant="normal">sin</mi><mi>δ</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">(a\cos\delta,\ a\sin\delta)</annotation></semantics></math>와 <math><semantics><mrow><mo>(</mo><mo>−</mo><mi>a</mi><mi mathvariant="normal">cos</mi><mi>δ</mi><mo>,</mo><mspace width="0.25em"></mspace><mo>−</mo><mi>a</mi><mi mathvariant="normal">sin</mi><mi>δ</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">(-a\cos\delta,\ -a\sin\delta)</annotation></semantics></math>다. 계산하면 다음과 같다.</p>
-    <div class="eq"><math class="d" displaystyle="true"><semantics><mrow><msub><mi>I</mi><mrow><mi>x</mi><mi>y</mi></mrow></msub><mo>=</mo><mo>−</mo><mn>2</mn><mi>m</mi><msup><mi>a</mi><mn>2</mn></msup><mi mathvariant="normal">sin</mi><mi>δ</mi><mi mathvariant="normal">cos</mi><mi>δ</mi><mo>=</mo><mo>−</mo><mi>m</mi><msup><mi>a</mi><mn>2</mn></msup><mi mathvariant="normal">sin</mi><mspace width="0.17em"></mspace><mn>2</mn><mi>δ</mi></mrow><annotation encoding="application/x-tex">I_{xy} = -2ma^2\sin\delta\cos\delta = -ma^2\sin\,2\delta</annotation></semantics></math></div>
-    <p>숟가락 몸체만의 관성 모멘트 차이를 <math><semantics><mrow><msub><mi>D</mi><mn>0</mn></msub><mo>=</mo><msub><mi>I</mi><mrow><mi>y</mi><mi>y</mi><mo>,</mo><mn>0</mn></mrow></msub><mo>−</mo><msub><mi>I</mi><mrow><mi>x</mi><mi>x</mi><mo>,</mo><mn>0</mn></mrow></msub></mrow><annotation encoding="application/x-tex">D_0 = I_{yy,0} - I_{xx,0}</annotation></semantics></math>라 하자. 숟가락이 길쭉하니 <math><semantics><mrow><msub><mi>D</mi><mn>0</mn></msub><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">D_0 &gt; 0</annotation></semantics></math>이다. 몸체와 무게추를 합친 물체의 주축이 긴 축에서 돌아간 각 θ는 이 식으로 구한다.</p>
-    <div class="eq"><math class="d" displaystyle="true"><semantics><mrow><mi mathvariant="normal">tan</mi><mspace width="0.17em"></mspace><mn>2</mn><mi>θ</mi><mo>=</mo><mfrac><mrow><mn>2</mn><mi>m</mi><msup><mi>a</mi><mn>2</mn></msup><mi mathvariant="normal">sin</mi><mspace width="0.17em"></mspace><mn>2</mn><mi>δ</mi></mrow><mrow><msub><mi>D</mi><mn>0</mn></msub><mo>+</mo><mn>2</mn><mi>m</mi><msup><mi>a</mi><mn>2</mn></msup><mi mathvariant="normal">cos</mi><mspace width="0.17em"></mspace><mn>2</mn><mi>δ</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\tan\,2\theta = \frac{2ma^2\sin\,2\delta}{D_0 + 2ma^2\cos\,2\delta}</annotation></semantics></math><br><span class="c">몸체가 없으면(<math><semantics><mrow><msub><mi>D</mi><mn>0</mn></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">D_0 = 0</annotation></semantics></math>) θ = δ. 몸체가 무거울수록 θ는 δ보다 작다</span></div>
-    <p>이 식에서 알 수 있는 것은 두 가지다. δ = 0이면 θ = 0이다. δ의 부호를 바꾸면 θ의 부호도 바뀐다. 우리가 정말로 바꾸는 것은 막대의 각 δ가 아니라 주축의 각 θ다. 5부에서 결과를 θ에 대해서도 그려 본다.</p>
+    <h3>1.3 바닥 모양도 축을 정한다</h3>
+    <p>우리 래틀백 바닥은 길이 방향으로는 완만하게, 폭 방향으로는 급하게 휘어 있다. 그래서 바닥 모양이 정해 주는 축도 있다. 길게 뻗은 방향이다.</p>
+    <p>래틀백의 비밀은 이 두 축, 즉 <strong>바닥 모양의 축</strong>과 <strong>무게의 축</strong>이 살짝 어긋나 있다는 데 있다. 막대를 0°에 두면 두 축이 겹친다. 막대를 틀면 두 축이 어긋난다.</p>
     <div class="note">
-      <span class="tagline">숫자 감각</span>
-      500원 동전 두 개(각 약 7.7 g)를 a = 4 cm에 붙이면 <math><semantics><mrow><mn>2</mn><mi>m</mi><msup><mi>a</mi><mn>2</mn></msup><mo>≈</mo><mn>2.5</mn><mo>×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>5</mn></mrow></msup><mspace width="0.17em"></mspace><msup><mtext>kg·m</mtext><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">2ma^2 \approx 2.5\times10^{-5}\,\text{kg·m}^2</annotation></semantics></math>다. 숟가락 몸체의 <math><semantics><mrow><msub><mi>D</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">D_0</annotation></semantics></math>는 2부 방법으로 재야 하지만, 같은 크기 정도라면 δ = 20°에서 θ는 대략 10° 안팎이 된다.
+      <span class="tagline">더 알고 싶은 사람만</span>
+      막대를 δ만큼 틀었을 때 무게의 축이 실제로 돌아가는 각 θ는 다음 식으로 구한다. m은 동전 한쪽 무게, a는 가운데에서 동전까지 거리(7 cm), <math><semantics><mrow><msub><mi>D</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">D_0</annotation></semantics></math>는 바닥만의 값이다(2.5절).
+      <div class="eq" style="margin:12px 0"><math class="d" displaystyle="true"><semantics><mrow><mi mathvariant="normal">tan</mi><mspace width="0.17em"></mspace><mn>2</mn><mi>θ</mi><mo>=</mo><mfrac><mrow><mn>2</mn><mi>m</mi><msup><mi>a</mi><mn>2</mn></msup><mi mathvariant="normal">sin</mi><mspace width="0.17em"></mspace><mn>2</mn><mi>δ</mi></mrow><mrow><msub><mi>D</mi><mn>0</mn></msub><mo>+</mo><mn>2</mn><mi>m</mi><msup><mi>a</mi><mn>2</mn></msup><mi mathvariant="normal">cos</mi><mspace width="0.17em"></mspace><mn>2</mn><mi>δ</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\tan\,2\theta = \frac{2ma^2\sin\,2\delta}{D_0 + 2ma^2\cos\,2\delta}</annotation></semantics></math></div>
+      바닥도 무게가 있어서 θ는 δ보다 조금 작다. δ가 0이면 θ도 0이고, δ의 부호를 바꾸면 θ의 부호도 바뀐다.
     </div>
 
-    <h3>1.4 구르는 접촉과 마찰</h3>
-    <p>래틀백 바닥은 책상과 한 점에서 닿는다. 래틀백이 흔들리면 이 접촉점이 바닥 위를 옮겨 다닌다. 책상이 충분히 거칠면 접촉점은 미끄러지지 않는다. 즉 접촉점의 순간 속도가 0이다. 이것을 <strong>구름 조건</strong>이라 한다.</p>
-    <p>구름 조건을 지키게 하는 힘이 <strong>정지 마찰력</strong>이다. 이 힘은 질량 중심이 아니라 접촉점에 작용한다. 그래서 질량 중심에 대해 돌림힘을 만든다. 래틀백의 각운동량을 바꾸는 바깥 돌림힘은 바로 이것이다.</p>
-    <p>흥미로운 점이 하나 있다. 미끄러지지 않는 접촉점은 움직이지 않으므로 정지 마찰력은 일을 하지 않는다. 그래서 이상적인 모형에서는 역학적 에너지가 보존되면서도 회전 방향이 바뀐다. 에너지는 사라지지 않고 회전과 흔들림 사이를 오갈 뿐이다. 실제로는 구름 저항과 공기 저항으로 조금씩 줄어든다.</p>
-
-    <h3>1.5 곡률과 바닥의 두 축</h3>
-    <p>숟가락 바닥은 길이 방향으로는 완만하게, 폭 방향으로는 급하게 휘어 있다. 휜 정도를 <strong>곡률</strong>이라 하며, 그 곡면에 맞는 원의 반지름(곡률 반지름) ρ의 역수다.</p>
-    <div class="eq"><math class="d" displaystyle="true"><semantics><mrow><mi>κ</mi><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mi>ρ</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\kappa = \frac{1}{\rho}</annotation></semantics></math></div>
-    <p>곡률이 가장 작은 방향과 가장 큰 방향을 바닥의 두 축이라 하자. 래틀백은 이 바닥의 축과 1.2절의 질량 주축이 어긋나 있는 물체다. 두 축이 같은 방향이면(θ = 0) 끄덕임과 좌우 흔들림이 서로 따로 논다. 어긋나 있으면 한쪽 흔들림이 다른 쪽 흔들림과 회전을 함께 끌고 다닌다.</p>
-    <p>안정하게 서 있으려면 질량 중심이 두 곡률 반지름보다 낮아야 한다. 숟가락 위에 무게추를 너무 높이 쌓으면 래틀백이 쓰러진다. 2부에서 막대를 숟가락에 바짝 붙이는 이유다.</p>
-
-    <h3>1.6 결합 진동: 회전이 흔들림으로, 흔들림이 회전으로</h3>
-    <p>래틀백을 회전 없이 놓고 끝을 톡 치면 앞뒤로 끄덕인다(pitch). 옆을 치면 좌우로 흔들린다(roll). 각각 고유한 진동수가 있다. 래틀백이 돌고 있으면 이 두 흔들림과 회전이 구름 조건을 통해 서로 이어진다. 이것을 <strong>결합</strong>이라 한다.</p>
-    <p>θ ≠ 0이면 결합에 방향이 생긴다. 한쪽 방향으로 돌 때는 작은 끄덕임이 저절로 사그라든다. 반대쪽으로 돌 때는 작은 끄덕임이 지수함수처럼 커진다. 이렇게 작은 흔들림이 스스로 커지는 것을 <strong>불안정성</strong>이라 한다. 커진 끄덕임이 마찰을 통해 회전에 반대쪽 돌림힘을 주고, 회전이 멈춘 뒤 반대로 돈다.</p>
-    <p>거꾸로 회전 없이 끄덕이게만 해도 같은 결합 때문에 회전이 생긴다. 끝을 칠 때와 옆을 칠 때 생기는 회전 방향은 보통 서로 반대다. 3부의 두드리기 실험이 이것을 확인한다.</p>
+    <h3>1.4 회전과 흔들림이 서로 주고받는다</h3>
+    <p>래틀백을 돌리지 않고 끝을 톡 누르면 앞뒤로 끄덕인다. 옆을 치면 좌우로 흔들린다. 두 축이 어긋난 래틀백에서는 이 흔들림과 회전이 서로 에너지를 주고받는다.</p>
+    <ul class="plain">
+      <li><strong>좋아하는 방향으로 돌릴 때:</strong> 작은 흔들림이 생겨도 금방 사라진다. 그래서 오래 매끄럽게 돈다.</li>
+      <li><strong>싫어하는 방향으로 돌릴 때:</strong> 작은 흔들림이 점점 커진다. 회전 에너지가 흔들림으로 넘어가 덜컹거린다. 회전이 멈추고, 흔들림의 에너지가 다시 회전으로 돌아오는데 이번에는 반대 방향이다.</li>
+    </ul>
+    <p>그래서 돌리지 않고 끝을 톡 치기만 해도 래틀백은 저절로 돌기 시작한다. 흔들림이 회전으로 넘어가기 때문이다.</p>
 
     <figure>
       <svg viewBox="0 0 720 260" role="img" aria-label="좋아하지 않는 방향으로 돌렸을 때 각속도가 음수에서 0을 지나 양수가 되고, 그 사이 끄덕임이 커졌다 줄어드는 예상 그래프">
@@ -472,36 +462,48 @@ figure foreignObject math.d{math-style:normal}
   <text class="sm" x="518.0" y="74.5" style="fill:var(--elec)">ω₁ (좋아하는 방향)</text>
   <text class="sm" x="406.0" y="216" style="fill:var(--mag)">끄덕임</text>
 </svg>
-      <figcaption><b>그림 1-1</b>좋아하지 않는 방향으로 돌렸을 때 예상되는 모양. 회전 속도 ω(실선)가 줄어드는 동안 끄덕임의 크기(점선)가 커진다. ω가 0을 지나 반대 부호가 되면 끄덕임이 다시 잦아든다. 실제 시간 척도는 시제품마다 다르다.</figcaption>
+      <figcaption><b>그림 1-1</b>싫어하는 방향으로 돌렸을 때 예상되는 모양. 파란 선이 회전 빠르기다. 처음엔 반대 방향(아래)으로 돌다가 0을 지나 좋아하는 방향(위)으로 바뀐다. 그 사이 끄덕임(주황)이 커졌다 줄어든다.</figcaption>
     </figure>
 
-    <div class="note m">
-      <span class="tagline">여기까지 이해했는지 확인</span>
-      다음 세 가지를 백지에 설명해 본다. (1) 래틀백의 각운동량이 바뀌는 이유. (2) 무게추를 비틀면 왜 관성 곱이 생기는지. (3) 마찰이 일을 하지 않는데 회전 방향이 바뀌는 이유.
+    <h3>1.5 책상의 마찰이 꼭 필요하다</h3>
+    <p>래틀백 바닥은 책상과 한 점에서 닿는다. 래틀백이 흔들리면 이 점이 책상 위를 옮겨 다닌다. 책상이 적당히 거칠면 이 점은 미끄러지지 않고 구른다. 이때 책상이 래틀백을 살짝 밀어 주는 힘(마찰력)이 래틀백을 비틀어 방향을 바꾼다.</p>
+    <p>그래서 책상이 너무 미끄러우면 래틀백은 마음을 바꾸지 못한다. 세제를 바른 유리 위에서 실험해 확인한다(3.5절).</p>
+    <div class="note">
+      <span class="tagline">에너지는 어디로 가나</span>
+      미끄러지지 않고 구르는 점은 그 순간 멈춰 있다. 멈춘 점을 미는 힘은 에너지를 빼앗지 않는다. 그래서 래틀백의 에너지는 사라지지 않고 회전과 흔들림 사이를 오간다. 실제로는 공기와 바닥 때문에 조금씩 줄어서, 마음을 바꾼 뒤의 회전은 처음보다 느리다.
     </div>
 
-    <h3>1.7 거울 대칭과 손대칭</h3>
-    <p>어떤 물체를 거울에 비춘 모습과 원래 모습을 회전시켜 겹칠 수 없으면 그 물체는 <strong>손대칭(카이랄)</strong>이라 한다. 오른손과 왼손이 대표적이다. δ ≠ 0인 래틀백은 손대칭이다. +δ 래틀백을 거울에 비추면 −δ 래틀백이 된다.</p>
-    <p>뉴턴 역학은 거울에 비춰도 같은 꼴이다. 그러니 +δ 래틀백이 시계 반대 방향을 좋아한다면 −δ 래틀백은 반드시 시계 방향을 좋아해야 한다. 법칙이 방향을 고르는 것이 아니라 물체의 손대칭이 고른다. 이 예측을 거울상 쌍으로 확인하는 것이 우리 실험의 중심이다.</p>
+    <h3>1.6 거울에 비추면</h3>
+    <p>막대를 +20°로 튼 래틀백을 거울에 비추면 −20°로 튼 래틀백이 된다. 오른손과 왼손처럼 서로 거울상이다. 물리 법칙은 거울 속에서도 똑같으니, 두 래틀백은 정확히 반대 방향을 좋아해야 한다.</p>
+    <p>결국 방향을 고르는 것은 법칙이 아니라 <strong>물체의 모양</strong>이다. 이 예측을 실험으로 확인하는 것이 우리 탐구의 중심이다.</p>
+    <div class="note m">
+      <span class="tagline">여기까지 이해했는지 확인</span>
+      다음 세 가지를 친구에게 말로 설명해 본다. (1) 래틀백의 방향을 바꾸는 것은 누구인가. (2) 막대를 틀면 무엇이 어긋나는가. (3) 미끄러운 바닥에서는 왜 안 되는가.
+    </div>
   </div>
 </section>
 
 <section id="s2">
   <div class="wrap">
     <p class="part">2부</p>
-    <h2>만들기: 비틀림을 바꿀 수 있는 래틀백</h2>
-    <p class="sub">제작 담당이 먼저 읽는다. 첫 주 안에 잘 뒤집히는 시제품이 나와야 나머지 일정이 맞는다.</p>
+    <h2>만들기: 3D 프린터로 큰 래틀백</h2>
+    <p class="sub">제작 담당이 먼저 읽는다. 설계 파일은 <code>rattleback.scad</code>(OpenSCAD)이다. 첫 출력으로 실제로 마음을 바꾸는지부터 확인한다.</p>
 
-    <h3>2.1 구조</h3>
-    <ul class="plain">
-      <li><strong>몸체:</strong> 플라스틱 숟가락의 오목한 부분(머리)만 잘라 뒤집어 쓴다. 볼록한 바닥이 래틀백 바닥이 된다. 길이 방향과 폭 방향의 곡률이 다르다는 조건을 이미 갖추고 있다.</li>
-      <li><strong>막대:</strong> 아이스크림 막대를 숟가락 머리 길이에 맞게 자른다. 가운데에 각도기로 0°, ±5°, ±10°, ±20°, ±30° 눈금을 그린 종이를 숟가락 등에 붙이고, 그 눈금에 맞춰 막대를 얹는다.</li>
-      <li><strong>무게추:</strong> 막대 양 끝에 같은 무게를 단다. 500원 동전 또는 같은 양의 찰흙. 두 무게추가 중심에서 같은 거리 a에 오게 한다.</li>
-      <li><strong>고정:</strong> 막대는 양면테이프나 찰흙으로 붙여 각도를 바꿀 수 있게 한다. 본 측정에서는 각 δ마다 따로 만든 고정형 래틀백을 쓰는 편이 반복성이 좋다.</li>
-    </ul>
+    <h3>2.1 두 부품</h3>
+    <div class="tw">
+      <table>
+        <thead><tr><th>부품</th><th>모양과 크기</th><th>역할</th></tr></thead>
+        <tbody>
+          <tr><td>바닥</td><td>길쭉한 그릇을 엎은 모양(반타원체). 길이 180 mm, 폭 60 mm, 깊이 20 mm. 윗면은 평평하다</td><td>책상에 닿아 구른다. 윗면에 5° 간격 눈금이 새겨져 있다</td></tr>
+          <tr><td>막대(팔)</td><td>길이 140 mm 막대 양 끝에 동전 받침. 중심에서 동전까지 70 mm</td><td>동전 무게를 싣는다. 돌려서 각도를 정한다</td></tr>
+          <tr><td>볼트와 너트</td><td>M4 볼트 16 mm, M4 너트</td><td>막대를 바닥에 고정한다. 너트는 바닥 윗면의 육각 홈에 넣는다</td></tr>
+          <tr><td>무게추</td><td>500원 동전, 한쪽에 1~3개</td><td>개수로 고집의 세기를 바꾼다</td></tr>
+        </tbody>
+      </table>
+    </div>
 
     <figure>
-      <svg viewBox="0 0 720 220" role="img" aria-label="옆에서 본 래틀백. 볼록한 숟가락 머리 위에 막대와 무게추가 붙어 있다">
+      <svg viewBox="0 0 720 220" role="img" aria-label="옆에서 본 래틀백. 볼록한 바닥 위에 막대와 무게추가 붙어 있다">
   <line x1="40" y1="180" x2="680" y2="180" class="kt"/>
   <text class="sm" x="44" y="200">유리판</text>
   <path d="M 140 150 Q 360 215 580 150" class="Lb" style="fill-opacity:.35"/>
@@ -510,65 +512,75 @@ figure foreignObject math.d{math-style:normal}
   <rect x="172" y="118" width="36" height="22" rx="4" class="Mb"/>
   <rect x="512" y="118" width="36" height="22" rx="4" class="Mb"/>
   <circle cx="360" cy="140" r="4" class="fk"/>
-  <text class="sm" x="372" y="128">질량 중심 (낮을수록 안정)</text>
+  <text class="sm" x="372" y="128">볼트 · 무게 중심은 낮게</text>
   <circle cx="360" cy="181" r="3.5" style="fill:var(--elec)"/>
   <text class="sm" x="372" y="174" style="fill:var(--elec)">접촉점</text>
   <text class="sm" x="160" y="104" style="fill:var(--mag)">동전 m</text>
   <text class="sm" x="500" y="104" style="fill:var(--mag)">동전 m</text>
-  <text class="sm" x="590" y="146">아이스크림 막대</text>
-  <text class="sm" x="590" y="164" style="fill:var(--light)">숟가락 머리 (뒤집음)</text>
+  <text class="sm" x="590" y="146">막대 (3D 출력)</text>
+  <text class="sm" x="590" y="164" style="fill:var(--light)">바닥 (3D 출력)</text>
   <line x1="190" y1="62" x2="530" y2="62" class="k" marker-start="url(#ab1)" marker-end="url(#ab1)"/>
   <defs><marker id="ab1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path class="fk" d="M0,0 L10,5 L0,10 z"/></marker></defs>
   <text class="sm" x="360" y="54" text-anchor="middle">2a</text>
 </svg>
 
-      <figcaption><b>그림 2-1</b>옆에서 본 모습. 막대는 숟가락 등에 바짝 붙인다. 무게추가 높이 올라갈수록 질량 중심이 올라가 쓰러지기 쉽다(1.5절).</figcaption>
+      <figcaption><b>그림 2-1</b>옆에서 본 모습. 막대는 바닥 윗면에 바짝 붙어 있다. 무게가 낮게 있어야 쓰러지지 않는다.</figcaption>
     </figure>
 
-    <h3>2.2 준비물</h3>
+    <h3>2.2 설계 파일 쓰는 법</h3>
+    <ol class="plain">
+      <li>OpenSCAD(무료)를 설치하고 <code>rattleback.scad</code>를 연다.</li>
+      <li>맨 위 <code>part = "both"</code> 상태에서 F5를 누르면 조립된 모습이 보인다. <code>delta</code> 숫자를 바꾸면 막대가 돌아간다.</li>
+      <li><code>part = "base"</code>로 바꾸고 F6(렌더), F7(STL 내보내기). 바닥이 뒤집힌 채로 저장되는데, 평평한 윗면이 출력판에 닿게 하려는 것이다.</li>
+      <li><code>part = "arm"</code>으로 바꿔 같은 방법으로 막대를 저장한다.</li>
+      <li>크기를 바꾸려면 <code>L</code>, <code>W</code>, <code>H</code>, <code>a_pos</code> 숫자만 고친다.</li>
+    </ol>
+
+    <h3>2.3 출력 설정</h3>
     <div class="tw">
       <table>
-        <thead><tr><th>물품</th><th>수량</th><th class="n">값</th></tr></thead>
+        <thead><tr><th>항목</th><th>설정</th><th>이유</th></tr></thead>
         <tbody>
-          <tr><td>단단한 플라스틱 숟가락(머리가 길쭉한 것), 두세 종류</td><td>20개</td><td class="n">3천 원</td></tr>
-          <tr><td>아이스크림 막대</td><td>30개</td><td class="n">2천 원</td></tr>
-          <tr><td>찰흙(유토)</td><td>1개</td><td class="n">2천 원</td></tr>
-          <tr><td>500원 동전</td><td>10개</td><td class="n">&#8212;</td></tr>
-          <tr><td>글루건, 양면테이프, 각도기, 전자저울(0.1 g)</td><td>&#8212;</td><td class="n">학교 것</td></tr>
-          <tr><td>색 스티커(지름 5 mm 안팎, 두 색)</td><td>1장</td><td class="n">1천 원</td></tr>
-          <tr><td>시판 래틀백(비교 기준)</td><td>1~2개</td><td class="n">5천~1만 원</td></tr>
-          <tr><td>바닥: 유리판(액자 유리), 고무 매트, 복사지, 주방세제</td><td>&#8212;</td><td class="n">집에 있는 것</td></tr>
+          <tr><td>재료</td><td>PLA</td><td>잘 뽑히고 단단하다</td></tr>
+          <tr><td>층 높이</td><td>0.12 mm, 적응형 레이어 켬</td><td>바닥 볼록면의 계단 자국을 줄인다</td></tr>
+          <tr><td>아이로닝</td><td>켬 (맨 윗면)</td><td>마지막 층을 다림질하듯 매끄럽게</td></tr>
+          <tr><td>채우기(인필)</td><td>100%, 또는 동심원·자이로이드 무늬</td><td>무게가 한쪽으로 쏠리지 않게. 비스듬한 무늬는 의도하지 않은 비틀림을 만든다</td></tr>
+          <tr><td>서포트</td><td>없음</td><td>평평한 면을 아래로 두면 필요 없다</td></tr>
+          <tr><td>개수</td><td>바닥 2개, 막대 2개</td><td>실패 대비, 그리고 거울상 시연용 한 쌍</td></tr>
         </tbody>
       </table>
     </div>
 
-    <h3>2.3 만드는 순서</h3>
+    <h3>2.4 출력 후 다듬기</h3>
+    <p>바닥을 뒤집어 출력하면 가장 볼록한 곳(책상에 닿는 곳)이 마지막 층이 된다. 이 부근은 거의 평평해서 층이 계단처럼 넓게 남는다. 이 평평한 부분이 크면 래틀백이 잘 구르지 못한다.</p>
     <ol class="plain">
-      <li>숟가락 머리를 잘라 낸다. 자른 면을 사포로 다듬는다.</li>
-      <li>숟가락 머리를 유리판 위에 뒤집어 놓고 손으로 살짝 눌러 본다. 어느 쪽으로도 기울지 않고 한 점에서 서는지 확인한다.</li>
-      <li>숟가락 등 가운데에 각도 눈금 종이를 붙인다. 0° 선이 숟가락의 긴 축과 맞아야 한다.</li>
-      <li>막대 양 끝에 무게추를 붙이고 저울로 두 쪽 무게를 맞춘다. 차이는 0.2 g 안으로.</li>
-      <li>막대를 원하는 δ에 맞춰 붙인다. 막대 가운데가 숟가락 중심에 오게 한다.</li>
-      <li>무게추 두 개의 질량 m, 중심에서의 거리 a, 숟가락 머리의 질량 M과 길이 L을 기록한다.</li>
-      <li>래틀백마다 δ 값을 쓴 이름표를 붙이고, 위에서 찍을 때 보이도록 양 끝에 색 스티커를 붙인다.</li>
+      <li>바닥 가운데 부근을 사포 400번, 800번, 1500번 순서로 둥글게 문지른다. 한 방향으로만 세게 문지르지 말고 고르게 돌려 가며 한다.</li>
+      <li>유리판 위에 놓고 손으로 살짝 굴려 본다. 어느 쪽으로도 툭 걸리는 느낌 없이 부드럽게 굴러야 한다.</li>
+      <li>그래도 걸리면 바닥을 옆으로 눕혀 서포트를 대고 다시 뽑는 방법을 선생님과 상의한다.</li>
+    </ol>
+
+    <h3>2.5 조립과 기록</h3>
+    <ol class="plain">
+      <li>바닥 윗면의 육각 홈에 M4 너트를 넣는다.</li>
+      <li>막대를 얹고 볼트를 끼워 손으로 가볍게 조인다.</li>
+      <li>막대 가운데 창으로 보이는 눈금을 원하는 각도에 맞추고 볼트를 조인다.</li>
+      <li>동전을 양쪽에 같은 개수로 올리고 테이프로 붙인다.</li>
+      <li>바닥 무게 M, 막대 무게, 동전 무게를 저울로 재서 기록한다.</li>
     </ol>
     <div class="note">
-      <span class="tagline">몸체의 <math><semantics><mrow><msub><mi>D</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">D_0</annotation></semantics></math> 어림</span>
-      숟가락 머리를 길이 L, 질량 M인 가는 막대로 보면 <math><semantics><mrow><msub><mi>D</mi><mn>0</mn></msub><mo>≈</mo><mfrac><mrow><mi>M</mi><msup><mi>L</mi><mn>2</mn></msup></mrow><mrow><mn>12</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">D_0 \approx \frac{ML^2}{12}</annotation></semantics></math>다. 숟가락 머리는 막대보다 넓으므로 실제 값은 이보다 조금 작다. 이 값을 1.3절 식에 넣어 각 δ에 대한 θ를 계산해 기록지에 적는다.
+      <span class="tagline"><math><semantics><mrow><msub><mi>D</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">D_0</annotation></semantics></math> 구하기 (1.3절 식에 쓴다)</span>
+      바닥을 반타원체로 보면 <math><semantics><mrow><msub><mi>D</mi><mn>0</mn></msub><mo>≈</mo><mfrac><mrow><mi>M</mi><mo>(</mo><msup><mi>L</mi><mn>2</mn></msup><mo>−</mo><msup><mi>W</mi><mn>2</mn></msup><mo>)</mo></mrow><mrow><mn>20</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">D_0 \approx \frac{M(L^2 - W^2)}{20}</annotation></semantics></math>이다. L = 180 mm, W = 60 mm면 <math><semantics><mrow><msub><mi>D</mi><mn>0</mn></msub><mo>≈</mo><mn>1440</mn><mspace width="0.17em"></mspace><mi>M</mi></mrow><annotation encoding="application/x-tex">D_0 \approx 1440\,M</annotation></semantics></math> (M은 g, 결과는 g·mm²). 바닥이 70 g이면 약 1.0×10⁵ g·mm²다. 동전을 한쪽에 3개(약 23 g) 올리면 <math><semantics><mrow><mn>2</mn><mi>m</mi><msup><mi>a</mi><mn>2</mn></msup><mo>≈</mo><mn>2.3</mn><mo>×</mo><msup><mn>10</mn><mrow><mn>5</mn></mrow></msup></mrow><annotation encoding="application/x-tex">2ma^2 \approx 2.3\times10^{5}</annotation></semantics></math> g·mm²이고, 이때 δ = 20°면 θ는 약 14°다.
     </div>
 
-    <h3>2.4 시제품 점검</h3>
-    <p>본 측정 전에 래틀백 하나(δ = 20°)를 만들어 다음을 확인한다.</p>
+    <h3>2.6 첫 출력 점검</h3>
+    <p>막대를 20°에 두고 동전을 양쪽에 2개씩 올린 뒤 확인한다.</p>
     <ul class="plain">
-      <li><strong>한쪽 방향으로 2초 이상 돈다.</strong> 안 되면 무게추를 줄이거나 막대를 더 낮게 붙인다.</li>
-      <li><strong>반대 방향으로 돌리면 덜컹거리다 뒤집힌다.</strong> 안 되면 δ를 30°로 키우거나 무게추를 무겁게(a를 크게) 한다.</li>
-      <li><strong>끝을 톡 치면 저절로 돌기 시작한다.</strong> 이것이 되면 결합이 충분히 강한 것이다.</li>
+      <li><strong>한쪽 방향으로 2초 이상 돈다.</strong></li>
+      <li><strong>반대 방향으로 돌리면 덜컹거리다 마음을 바꾼다.</strong> 안 되면 막대를 30°로, 동전을 3개로 늘린다.</li>
+      <li><strong>끝을 톡 치면 저절로 돌기 시작한다.</strong></li>
+      <li><strong>0°로 돌리면 고집이 사라진다.</strong> 0°인데도 한쪽을 좋아하면 바닥 출력이나 사포질이 비대칭인 것이다.</li>
     </ul>
-    <p>세 가지가 다 되면 같은 숟가락과 같은 무게추로 δ별 세트(0°, ±5°, ±10°, ±20°, ±30°, 모두 9개)를 만든다. 잘 안 되면 숟가락 종류를 바꿔 본다. 머리가 길쭉하고 단단할수록 잘 된다.</p>
-    <div class="note w">
-      <span class="tagline">시간이 없을 때</span>
-      <b>첫 주가 끝날 때까지 시제품이 뒤집히지 않으면 시판 래틀백을 중심으로 바꾼다.</b> 시판 래틀백 위에 찰흙을 붙여 비틀림을 일부러 키우거나 줄이는 방식으로도 같은 질문을 할 수 있다.
-    </div>
+    <p>잘 안 되면 설계 파일에서 바닥 깊이 <code>H</code>를 15~25 mm 사이로 바꿔 다시 뽑는다. 깊이가 얕을수록 폭 방향으로 덜 휘어 더 안정하게 선다.</p>
   </div>
 </section>
 
@@ -576,65 +588,56 @@ figure foreignObject math.d{math-style:normal}
   <div class="wrap">
     <p class="part">3부</p>
     <h2>측정</h2>
-    <p class="sub">측정 담당과 데이터 담당이 함께 읽는다. 모든 측정은 위에서 찍은 슬로모션 영상 하나로 끝난다.</p>
+    <p class="sub">측정 담당과 데이터 담당이 함께 읽는다. 모든 측정은 위에서 찍은 슬로모션 영상으로 한다.</p>
 
-    <h3>3.1 촬영 장치</h3>
+    <h3>3.1 촬영</h3>
     <ul class="plain">
-      <li>폰을 삼각대나 책 더미에 올려 바닥에서 40~50 cm 위에서 똑바로 내려다보게 고정한다.</li>
-      <li>슬로모션 240fps로 찍는다. 1초에 몇 바퀴 도는 회전도 한 바퀴에 수십 장이 찍힌다.</li>
-      <li>화면 안에 길이를 아는 자를 함께 둔다. 각도만 잴 때는 필요 없지만, 흔들림 크기를 볼 때 쓴다.</li>
-      <li>조명은 위쪽에서 고르게 비춘다. 그림자가 진하면 Tracker가 스티커를 놓친다.</li>
+      <li>폰을 바닥에서 50~60 cm 위에 고정해 똑바로 내려다보게 찍는다.</li>
+      <li>슬로모션 240fps로 찍는다.</li>
+      <li>막대 양 끝에 색이 다른 스티커를 붙인다. 이 두 점으로 각도를 잰다.</li>
+      <li>조명은 위에서 고르게 비춘다. 그림자가 진하면 프로그램이 스티커를 놓친다.</li>
     </ul>
-    <p>래틀백 위에 폰을 올려 자이로 센서로 재는 방법은 쓰지 않는다. 폰이 래틀백보다 훨씬 무거워서 질량 분포를 폰이 정해 버린다.</p>
 
-    <h3>3.2 Tracker로 회전 각 구하기</h3>
+    <h3>3.2 영상에서 회전 빠르기 구하기</h3>
     <ol class="plain">
-      <li>Tracker(무료, physlets.org/tracker)에 영상을 연다. 슬로모션 영상은 프레임 속도를 240으로 직접 맞춘다.</li>
-      <li>양 끝 스티커를 각각 점 질량으로 추적한다. 자동 추적이 놓치면 손으로 고친다.</li>
-      <li>두 점의 좌표 차이로 각을 구한다. <math><semantics><mrow><mi>φ</mi><mo>=</mo><mi mathvariant="normal">arctan</mi><mfrac><mrow><msub><mi>y</mi><mn>2</mn></msub><mo>−</mo><msub><mi>y</mi><mn>1</mn></msub></mrow><mrow><msub><mi>x</mi><mn>2</mn></msub><mo>−</mo><msub><mi>x</mi><mn>1</mn></msub></mrow></mfrac></mrow><annotation encoding="application/x-tex">\phi = \arctan\frac{y_2 - y_1}{x_2 - x_1}</annotation></semantics></math>. 스프레드시트에서는 <code>ATAN2</code> 함수를 쓴다.</li>
-      <li>각이 −180°에서 +180°로 뛰는 곳은 360°를 더하거나 빼서 이어 붙인다(펼치기).</li>
-      <li>이웃한 프레임의 각 차이를 시간 간격으로 나눠 각속도를 구한다. <math><semantics><mrow><mi>ω</mi><mo>≈</mo><mfrac><mrow><mi mathvariant="normal">Δ</mi><mi>φ</mi></mrow><mrow><mi mathvariant="normal">Δ</mi><mi>t</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\omega \approx \frac{\Delta\phi}{\Delta t}</annotation></semantics></math>. 잡음이 크면 5프레임씩 묶어 기울기를 구한다.</li>
+      <li>Tracker(무료, physlets.org/tracker)에 영상을 연다. 프레임 속도를 240으로 맞춘다.</li>
+      <li>양 끝 스티커를 각각 추적한다.</li>
+      <li>스프레드시트에서 두 점을 잇는 선의 각도를 구한다. <code>=DEGREES(ATAN2(x2-x1, y2-y1))</code></li>
+      <li>각도가 −180°에서 +180°로 갑자기 뛰는 곳은 360°를 더하거나 빼서 이어 붙인다.</li>
+      <li>이웃한 프레임의 각도 차이를 시간 차이로 나누면 회전 빠르기 ω가 나온다. 들쭉날쭉하면 5프레임씩 묶어 평균한다.</li>
     </ol>
-    <p>끄덕임의 크기는 위에서 보면 잘 안 보인다. 옆에서 한 대 더 찍을 수 있으면 스티커 높이 변화로 끄덕임을 잰다. 한 대뿐이면 덜컹거리는 소리가 크게 나는 구간으로 대신 표시한다.</p>
+    <p>위에서 볼 때 시계 반대 방향을 +, 시계 방향을 −로 정한다.</p>
 
-    <h3>3.3 실험 1: 비틀림 각과 뒤집힘</h3>
+    <h3>3.3 실험 1: 막대 각도에 따라</h3>
     <ol class="plain">
-      <li>래틀백을 유리판 가운데에 놓는다.</li>
-      <li>좋아하지 않는 방향으로 손가락으로 돌린다. 처음 회전 속도를 일정하게 하려고 같은 사람이 같은 방식으로 돌린다.</li>
-      <li>영상에서 처음 각속도 <math><semantics><mrow><msub><mi>ω</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">\omega_0</annotation></semantics></math>, 뒤집힘 시간 <math><semantics><mrow><msub><mi>t</mi><mi>r</mi></msub></mrow><annotation encoding="application/x-tex">t_r</annotation></semantics></math>(돌기 시작한 뒤 ω가 처음 0이 될 때까지), 뒤집힌 뒤 최대 각속도 <math><semantics><mrow><msub><mi>ω</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">\omega_1</annotation></semantics></math>을 읽는다.</li>
-      <li>δ마다 10번씩 한다. 반대 방향(좋아하는 방향)으로도 5번씩 돌려 뒤집히지 않는지 확인한다.</li>
+      <li>동전은 양쪽 2개씩으로 고정한다.</li>
+      <li>막대를 −30°, −20°, −10°, −5°, 0°, +5°, +10°, +20°, +30°에 차례로 맞춘다.</li>
+      <li>각 각도에서 싫어하는 방향으로 10번 돌린다. 좋아하는 방향으로도 5번 돌려 마음을 안 바꾸는지 확인한다.</li>
+      <li>영상에서 처음 빠르기 <math><semantics><mrow><msub><mi>ω</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">\omega_0</annotation></semantics></math>, 마음을 바꾸는 데 걸린 시간 <math><semantics><mrow><msub><mi>t</mi><mi>r</mi></msub></mrow><annotation encoding="application/x-tex">t_r</annotation></semantics></math>(손을 뗀 뒤 회전이 처음 멈출 때까지), 바꾼 뒤 가장 빠른 빠르기 <math><semantics><mrow><msub><mi>ω</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">\omega_1</annotation></semantics></math>을 읽는다.</li>
     </ol>
     <div class="note e">
       <span class="tagline">예상</span>
-      δ = 0°는 두 방향 모두 뒤집히지 않는다. |δ|가 클수록 <math><semantics><mrow><msub><mi>t</mi><mi>r</mi></msub></mrow><annotation encoding="application/x-tex">t_r</annotation></semantics></math>이 짧아진다. +δ와 −δ는 좋아하는 방향이 반대이고, 같은 |δ|에서 <math><semantics><mrow><msub><mi>t</mi><mi>r</mi></msub></mrow><annotation encoding="application/x-tex">t_r</annotation></semantics></math>이 비슷하다.
+      0°는 마음을 바꾸지 않는다. 많이 틀수록 <math><semantics><mrow><msub><mi>t</mi><mi>r</mi></msub></mrow><annotation encoding="application/x-tex">t_r</annotation></semantics></math>이 짧다. +와 −는 좋아하는 방향이 반대이고, 같은 크기의 각도에서 <math><semantics><mrow><msub><mi>t</mi><mi>r</mi></msub></mrow><annotation encoding="application/x-tex">t_r</annotation></semantics></math>이 비슷하다.
     </div>
 
-    <h3>3.4 실험 2: 두드리기</h3>
-    <ol class="plain">
-      <li>래틀백을 멈춘 상태로 놓는다.</li>
-      <li>한쪽 끝을 연필 끝으로 톡 눌렀다 뗀다(끄덕임). 어느 방향으로 돌기 시작하는지 기록한다.</li>
-      <li>옆면을 톡 친다(좌우 흔들림). 어느 방향으로 돌기 시작하는지 기록한다.</li>
-      <li>δ마다 각각 10번 한다.</li>
-    </ol>
-    <p>끄덕임과 좌우 흔들림이 만드는 회전 방향이 서로 반대인지, 그리고 δ의 부호를 바꾸면 둘 다 바뀌는지 본다.</p>
+    <h3>3.4 실험 2: 동전 개수에 따라</h3>
+    <p>막대를 +20°로 고정하고 동전을 양쪽 1개, 2개, 3개로 바꿔 실험 1을 되풀이한다. 동전이 많을수록 빨리 마음을 바꾸는지 본다.</p>
 
-    <h3>3.5 실험 3: 바닥 바꾸기</h3>
-    <p>δ = +20° 래틀백 하나로 바닥만 바꿔 실험 1을 되풀이한다.</p>
+    <h3>3.5 실험 3: 바닥에 따라</h3>
     <div class="tw">
       <table>
         <thead><tr><th>바닥</th><th>예상</th></tr></thead>
         <tbody>
-          <tr><td>유리판(기준)</td><td>잘 뒤집힌다</td></tr>
+          <tr><td>유리판 (기준)</td><td>잘 마음을 바꾼다</td></tr>
           <tr><td>복사지</td><td>비슷하거나 조금 느리다</td></tr>
-          <tr><td>고무 매트</td><td>흔들림이 빨리 죽어 뒤집힘이 약하다</td></tr>
-          <tr><td>주방세제를 얇게 바른 유리판</td><td>미끄러져 뒤집힘이 약해지거나 사라진다</td></tr>
+          <tr><td>고무 매트</td><td>흔들림이 빨리 죽어 약하다</td></tr>
+          <tr><td>주방세제를 얇게 바른 유리판</td><td>미끄러져 거의 못 바꾼다</td></tr>
         </tbody>
       </table>
     </div>
-    <p>세제 바닥에서 뒤집힘이 사라지면 "마찰이 없으면 래틀백도 없다"는 1.4절의 설명을 실험으로 뒷받침한다. 고무 매트 결과는 "마찰이 있어도 흔들림 에너지가 빨리 사라지면 안 된다"는 다른 조건을 보여 준다.</p>
 
-    <h3>3.6 실험 4: 시판 래틀백과 비교</h3>
-    <p>시판 래틀백으로 실험 1과 2를 한다. 우리 래틀백 가운데 어느 δ와 가장 비슷하게 행동하는지 찾으면, 시판 래틀백 안에 숨은 비틀림의 크기를 어림할 수 있다.</p>
+    <h3>3.6 실험 4: 두드리기</h3>
+    <p>멈춘 래틀백의 끝을 톡 누르면 앞뒤로, 옆을 치면 좌우로 흔들린다. 각각 어느 방향으로 돌기 시작하는지 10번씩 기록한다. 보통 둘은 반대 방향이다. 막대를 −로 바꾸면 둘 다 뒤집히는지 본다.</p>
   </div>
 </section>
 
@@ -642,18 +645,18 @@ figure foreignObject math.d{math-style:normal}
   <div class="wrap">
     <p class="part">4부 <span class="new">특수 세션</span></p>
     <h2>현장 시연</h2>
-    <p class="sub">시연 담당과 발표자 전원이 읽는다. 20분 발표 안에서 5분 남짓을 쓴다. 청중이 직접 예측하고 돌려 보는 참여형으로 한다.</p>
+    <p class="sub">20분 발표 안에서 5분 정도. 청중이 직접 예측하고 돌려 보는 참여형이다.</p>
 
     <h3>4.1 순서</h3>
     <div class="tw">
       <table>
         <thead><tr><th>시연</th><th>보여 줄 것</th><th>시간</th></tr></thead>
         <tbody>
-          <tr><td>① 마음을 바꾸는 숟가락</td><td>δ = +20° 래틀백을 좋아하는 방향과 반대 방향으로 돌린다. 실물화상기로 화면에 띄운다</td><td>1분</td></tr>
-          <tr><td>② 두드리면 돈다</td><td>멈춘 래틀백 끝을 톡 쳐서 저절로 도는 것을 보여 준다</td><td>30초</td></tr>
-          <tr><td>③ 거울상 맞히기</td><td>+20°와 −20° 래틀백을 청중에게 건네고 어느 쪽으로 뒤집힐지 먼저 손을 들게 한 뒤 돌려 본다</td><td>2분</td></tr>
-          <tr><td>④ 비틀림 0</td><td>δ = 0° 래틀백은 어느 쪽으로 돌려도 뒤집히지 않는다</td><td>30초</td></tr>
-          <tr><td>⑤ 미끄러운 바닥</td><td>세제를 바른 유리판에서 같은 래틀백이 뒤집히지 못하는 것을 보여 준다</td><td>1분</td></tr>
+          <tr><td>① 마음을 바꾸는 물체</td><td>+20° 래틀백을 좋아하는 방향, 싫어하는 방향으로 돌린다. 카메라로 화면에 띄운다</td><td>1분</td></tr>
+          <tr><td>② 톡 치면 돈다</td><td>멈춘 래틀백 끝을 톡 쳐서 저절로 도는 것을 보여 준다</td><td>30초</td></tr>
+          <tr><td>③ 거울상 맞히기</td><td>+20°와 −20° 래틀백을 나란히 놓고 청중에게 어느 쪽으로 돌지 손을 들게 한 뒤 돌린다</td><td>2분</td></tr>
+          <tr><td>④ 막대를 0°로</td><td>그 자리에서 볼트를 풀어 막대를 0°로 돌리면 고집이 사라진다</td><td>30초</td></tr>
+          <tr><td>⑤ 미끄러운 바닥</td><td>세제를 바른 유리 위에서는 마음을 바꾸지 못한다</td><td>1분</td></tr>
         </tbody>
       </table>
     </div>
@@ -661,37 +664,36 @@ figure foreignObject math.d{math-style:normal}
     <h3>4.2 말할 대사</h3>
     <div class="note e">
       <span class="tagline">①②</span>
-      "이 숟가락은 시계 반대 방향을 좋아합니다. 반대로 돌려 보겠습니다. 덜컹거리죠. 회전이 끄덕임으로 넘어가고 있습니다. 이제 멈추고, 원래 좋아하던 쪽으로 돕니다. 회전 없이 끝만 톡 쳐도 같은 방향으로 돌기 시작합니다."
+      "이 물체는 이쪽을 좋아합니다. 반대로 돌려 볼게요. 덜컹거리죠? 돌던 힘이 흔들림으로 넘어가고 있습니다. 멈추고, 원래 좋아하던 쪽으로 돕니다. 돌리지 않고 끝만 톡 쳐도 같은 쪽으로 돌기 시작합니다."
     </div>
     <div class="note l">
       <span class="tagline">③④</span>
-      "두 숟가락은 막대를 비튼 방향만 반대입니다. 거울에 비춘 사이죠. 이쪽이 시계 반대 방향을 좋아한다면 저쪽은 어느 방향을 좋아할까요? 손을 들어 주세요. 이제 막대를 비틀지 않은 숟가락입니다. 이 숟가락은 고를 이유가 없습니다."
+      "두 개는 위의 막대를 튼 방향만 반대입니다. 거울에 비춘 사이죠. 이쪽이 왼쪽을 좋아하면 저쪽은 어느 쪽을 좋아할까요? 손을 들어 주세요. 이제 막대를 똑바로 돌려 놓겠습니다. 이제는 고를 이유가 없습니다."
     </div>
     <div class="note m">
       <span class="tagline">⑤</span>
-      "같은 숟가락을 세제를 바른 유리 위에 올립니다. 미끄러지기만 하고 마음을 바꾸지 못합니다. 바닥의 마찰이 없으면 방향을 바꿀 돌림힘도 없습니다."
+      "같은 래틀백을 세제를 바른 유리 위에 올립니다. 미끄러지기만 하고 마음을 바꾸지 못합니다. 방향을 바꿔 주던 것은 바닥의 마찰이었습니다."
     </div>
 
-    <h3>4.3 준비물 체크리스트</h3>
+    <h3>4.3 준비물</h3>
     <div class="tw">
       <table>
         <thead><tr><th>물품</th><th>확인</th></tr></thead>
         <tbody>
-          <tr><td>래틀백: +20° 2개, −20° 2개, 0° 1개, 시판 1개 (예비 포함)</td><td>&#9744;</td></tr>
+          <tr><td>래틀백 2세트(+20°, −20°로 맞춘 것), 예비 볼트와 너트, 육각 렌치</td><td>&#9744;</td></tr>
+          <tr><td>500원 동전 12개, 테이프</td><td>&#9744;</td></tr>
           <tr><td>유리판 2장(하나는 세제용), 마른 천</td><td>&#9744;</td></tr>
-          <tr><td>실물화상기 또는 폰 거치대 + 화면 연결 케이블</td><td>&#9744;</td></tr>
+          <tr><td>폰 거치대나 실물화상기, 화면 연결 케이블</td><td>&#9744;</td></tr>
           <tr><td>노트북(PPT, 결과 그래프, 시연 영상), USB 메모리 백업</td><td>&#9744;</td></tr>
-          <tr><td>청중에게 건넬 래틀백 세트와 받침 접시</td><td>&#9744;</td></tr>
         </tbody>
       </table>
     </div>
 
-    <h3>4.4 리허설과 실패 대비</h3>
+    <h3>4.4 리허설과 대비책</h3>
     <ul class="plain">
-      <li>시연 ①~⑤를 이어서 5분 안에 끝내는 연습을 두 번 이상 한다. 한 사람이 돌리고, 다른 한 사람이 말한다.</li>
-      <li>발표장 책상이 기울거나 거칠 수 있다. 유리판을 꼭 가져가서 그 위에서만 시연한다.</li>
-      <li>청중에게 건넨 래틀백은 떨어뜨리면 막대가 틀어질 수 있다. 시연용과 측정용을 따로 둔다.</li>
-      <li>잘 안 되면 30초 안에 미리 찍은 슬로모션 영상으로 넘어간다. "현장에서는 잘 안 돌아서 미리 찍은 영상으로 보여 드리겠습니다"라고 말하면 된다.</li>
+      <li>①~⑤를 이어서 5분 안에 끝내는 연습을 두 번 이상 한다. 한 사람이 돌리고 다른 한 사람이 말한다.</li>
+      <li>발표장 책상이 기울거나 거칠 수 있으니 유리판 위에서만 시연한다.</li>
+      <li>잘 안 되면 30초 안에 미리 찍은 영상으로 넘어간다.</li>
     </ul>
   </div>
 </section>
@@ -705,20 +707,20 @@ figure foreignObject math.d{math-style:normal}
       <table>
         <thead><tr><th>증상</th><th>원인 후보</th><th>조치</th></tr></thead>
         <tbody>
-          <tr><td>어느 방향으로도 뒤집히지 않는다</td><td>비틀림이 작다, 무게추가 가볍다</td><td>δ를 키우거나 a를 늘린다. 숟가락 종류를 바꾼다</td></tr>
-          <tr><td>양쪽 방향 모두 뒤집힌다</td><td>질량 중심이 높거나 무게추 두 쪽이 다르다</td><td>막대를 낮게 붙이고 두 무게추를 다시 단다</td></tr>
-          <tr><td>돌리자마자 쓰러진다</td><td>질량 중심이 너무 높다</td><td>무게추를 줄이거나 숟가락 등에 더 바짝 붙인다</td></tr>
-          <tr><td>회전하면서 옆으로 미끄러져 간다</td><td>바닥이 기울었다, 너무 세게 돌렸다</td><td>수평계로 유리판을 맞추고 처음 회전을 줄인다</td></tr>
-          <tr><td>같은 δ인데 <math><semantics><mrow><msub><mi>t</mi><mi>r</mi></msub></mrow><annotation encoding="application/x-tex">t_r</annotation></semantics></math>이 들쭉날쭉하다</td><td>돌리는 손의 세기가 매번 다르다</td><td><math><semantics><mrow><msub><mi>ω</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">\omega_0</annotation></semantics></math>을 함께 기록해 <math><semantics><mrow><msub><mi>ω</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">\omega_0</annotation></semantics></math>이 비슷한 것끼리 비교한다</td></tr>
-          <tr><td>+δ와 −δ의 결과가 많이 다르다</td><td>막대 각도나 무게가 정확히 대칭이 아니다</td><td>각도와 무게를 다시 재고, 숟가락 자체의 비대칭을 의심한다</td></tr>
-          <tr><td>δ = 0°인데도 한쪽을 좋아한다</td><td>숟가락 바닥이 원래 조금 비틀려 있다</td><td>이 숟가락은 기준에서 빼고 이유를 기록해 둔다</td></tr>
-          <tr><td>Tracker가 스티커를 자꾸 놓친다</td><td>움직임이 빠르거나 그림자가 진하다</td><td>조명을 바꾸고, 스티커를 크고 진한 색으로 바꾼다</td></tr>
+          <tr><td>어느 쪽으로도 마음을 안 바꾼다</td><td>막대 각도가 작다, 동전이 적다</td><td>각도를 30°로, 동전을 3개로 늘린다</td></tr>
+          <tr><td>양쪽 방향 모두 마음을 바꾼다</td><td>동전 양쪽 개수가 다르다, 바닥이 비대칭이다</td><td>동전을 다시 맞추고, 0°에서 한쪽을 좋아하지 않는지 본다</td></tr>
+          <tr><td>돌다가 툭 걸리며 튄다</td><td>바닥 볼록면에 평평한 층이 남았다</td><td>사포로 더 다듬는다(2.4절)</td></tr>
+          <tr><td>돌리자마자 쓰러진다</td><td>무게가 너무 높거나 무겁다</td><td>동전을 줄인다</td></tr>
+          <tr><td>0°인데 한쪽을 좋아한다</td><td>출력이나 사포질이 비대칭, 인필이 비스듬하다</td><td>다른 바닥으로 바꾸고 원인을 기록한다</td></tr>
+          <tr><td>막대 각도가 돌다가 바뀐다</td><td>볼트가 덜 조여졌다</td><td>렌치로 조이고 매번 눈금을 확인한다</td></tr>
+          <tr><td>같은 각도인데 <math><semantics><mrow><msub><mi>t</mi><mi>r</mi></msub></mrow><annotation encoding="application/x-tex">t_r</annotation></semantics></math>이 들쭉날쭉하다</td><td>돌리는 손의 세기가 다르다</td><td><math><semantics><mrow><msub><mi>ω</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">\omega_0</annotation></semantics></math>을 같이 기록해 비슷한 것끼리 비교한다</td></tr>
+          <tr><td>Tracker가 스티커를 놓친다</td><td>빠르거나 그림자가 진하다</td><td>조명을 바꾸고 더 진한 스티커를 쓴다</td></tr>
         </tbody>
       </table>
     </div>
     <div class="note w">
       <span class="tagline">데이터를 버려야 할 때</span>
-      <b>원인을 찾지 못한 이상값은 지우지 말고 기록해 둔다.</b> δ = 0°인데 한쪽을 좋아하는 숟가락은 오히려 좋은 토의 재료다. 숟가락 자체에 비틀림이 숨어 있다는 뜻이기 때문이다.
+      <b>원인을 모르는 이상값은 지우지 말고 기록해 둔다.</b> 0°인데 한쪽을 좋아하는 바닥은 오히려 좋은 토의 재료다. 출력물 자체에 비틀림이 숨어 있다는 뜻이기 때문이다.
     </div>
   </div>
 </section>
@@ -726,7 +728,7 @@ figure foreignObject math.d{math-style:normal}
 <section id="s4">
   <div class="wrap">
     <p class="part">5부</p>
-    <h2>데이터 분석</h2>
+    <h2>결과 정리</h2>
     <p class="sub">측정이 끝난 뒤 펴는 파트다. 영상에서 숫자를 뽑고, 그래프 세 장을 만든다.</p>
 
     <h3>5.1 영상 한 편에서 뽑을 숫자</h3>
@@ -745,7 +747,7 @@ figure foreignObject math.d{math-style:normal}
     <h3>5.2 그래프 세 장</h3>
     <ol class="plain">
       <li><strong>ω–t 그래프 (대표 한 개씩):</strong> δ = 0°, +20°, −20°의 대표 시행을 한 그래프에 겹친다. 0°는 ω가 천천히 줄기만 하고, ±20°는 0을 지나 반대 부호로 가는 모습이 한눈에 보여야 한다.</li>
-      <li><strong><math><semantics><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><msub><mi>t</mi><mi>r</mi></msub></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{1}{t_r}</annotation></semantics></math>–θ 그래프:</strong> 가로축은 1.3절 식으로 계산한 주축 각 θ, 세로축은 뒤집힘의 빠르기 <math><semantics><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><msub><mi>t</mi><mi>r</mi></msub></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{1}{t_r}</annotation></semantics></math>이다. +θ와 −θ를 모두 찍는다. 뒤집히지 않은 경우는 <math><semantics><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><msub><mi>t</mi><mi>r</mi></msub></mrow></mfrac><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\frac{1}{t_r} = 0</annotation></semantics></math>으로 둔다.</li>
+      <li><strong><math><semantics><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><msub><mi>t</mi><mi>r</mi></msub></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{1}{t_r}</annotation></semantics></math>–δ 그래프:</strong> 가로축은 막대 각도 δ, 세로축은 마음을 바꾸는 빠르기 <math><semantics><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><msub><mi>t</mi><mi>r</mi></msub></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{1}{t_r}</annotation></semantics></math>이다. +와 −를 모두 찍는다. 1.3절 식으로 계산한 θ로도 한 장 그려 비교한다. 뒤집히지 않은 경우는 <math><semantics><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><msub><mi>t</mi><mi>r</mi></msub></mrow></mfrac><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\frac{1}{t_r} = 0</annotation></semantics></math>으로 둔다.</li>
       <li><strong>바닥별 막대그래프:</strong> 네 가지 바닥에서 뒤집힌 비율(10번 중 몇 번)과 평균 <math><semantics><mrow><msub><mi>t</mi><mi>r</mi></msub></mrow><annotation encoding="application/x-tex">t_r</annotation></semantics></math>.</li>
     </ol>
     <div class="note e">
@@ -754,7 +756,7 @@ figure foreignObject math.d{math-style:normal}
     </div>
 
     <h3>5.3 처음 회전 속도 보정</h3>
-    <p>손으로 돌리면 <math><semantics><mrow><msub><mi>ω</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">\omega_0</annotation></semantics></math>이 매번 다르다. 선형 이론에서는 불안정성이 자라는 빠르기가 회전 속도에 비례한다고 본다. 그래서 같은 δ 안에서 <math><semantics><mrow><msub><mi>t</mi><mi>r</mi></msub></mrow><annotation encoding="application/x-tex">t_r</annotation></semantics></math>과 <math><semantics><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><msub><mi>ω</mi><mn>0</mn></msub></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{1}{\omega_0}</annotation></semantics></math>이 비례하는지 먼저 확인한다. 비례하면 <math><semantics><mrow><msub><mi>ω</mi><mn>0</mn></msub><msub><mi>t</mi><mi>r</mi></msub></mrow><annotation encoding="application/x-tex">\omega_0 t_r</annotation></semantics></math>(뒤집힐 때까지 돈 각도에 해당)을 δ끼리 비교하는 편이 공정하다.</p>
+    <p>손으로 돌리면 처음 빠르기 <math><semantics><mrow><msub><mi>ω</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">\omega_0</annotation></semantics></math>이 매번 다르다. 빨리 돌릴수록 빨리 마음을 바꿀 것으로 예상한다. 그래서 같은 각도 안에서 <math><semantics><mrow><msub><mi>t</mi><mi>r</mi></msub></mrow><annotation encoding="application/x-tex">t_r</annotation></semantics></math>과 <math><semantics><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><msub><mi>ω</mi><mn>0</mn></msub></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{1}{\omega_0}</annotation></semantics></math>이 비례하는지 먼저 본다. 비례하면 <math><semantics><mrow><msub><mi>ω</mi><mn>0</mn></msub><msub><mi>t</mi><mi>r</mi></msub></mrow><annotation encoding="application/x-tex">\omega_0 t_r</annotation></semantics></math>(마음을 바꿀 때까지 돈 각도)을 각도끼리 비교하는 편이 공정하다.</p>
     <div class="eq"><math class="d" displaystyle="true"><semantics><mrow><msub><mi>ω</mi><mn>0</mn></msub><msub><mi>t</mi><mi>r</mi></msub><mo>≈</mo><mtext>뒤집힐 때까지 돈 각 (rad)</mtext></mrow><annotation encoding="application/x-tex">\omega_0 t_r \approx \text{뒤집힐 때까지 돈 각 (rad)}</annotation></semantics></math></div>
     <p>비례하지 않으면 <math><semantics><mrow><msub><mi>ω</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">\omega_0</annotation></semantics></math>이 비슷한 시행끼리만 골라 비교한다. 어느 쪽을 택했는지 발표에서 밝힌다.</p>
 
@@ -763,7 +765,7 @@ figure foreignObject math.d{math-style:normal}
       <li><strong>반복의 흩어짐:</strong> 같은 δ에서 10번 잰 <math><semantics><mrow><msub><mi>t</mi><mi>r</mi></msub></mrow><annotation encoding="application/x-tex">t_r</annotation></semantics></math>의 평균과 표준편차를 구한다. 그래프의 오차막대는 평균의 표준오차 <math><semantics><mrow><mfrac><mrow><mi>s</mi></mrow><mrow><msqrt><mrow><mi>n</mi></mrow></msqrt></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{s}{\sqrt{n}}</annotation></semantics></math>로 그린다.</li>
       <li><strong>시간 읽기:</strong> 240fps면 한 프레임이 약 4 ms다. ω가 0이 되는 프레임을 앞뒤 한두 장 틀리게 잡아도 <math><semantics><mrow><msub><mi>t</mi><mi>r</mi></msub></mrow><annotation encoding="application/x-tex">t_r</annotation></semantics></math>에 10 ms 정도 들어간다.</li>
       <li><strong>각도:</strong> 막대를 붙일 때 ±2°쯤 틀릴 수 있다. 각도기 눈금 사진을 찍어 두고 Tracker로 실제 각을 다시 잰다.</li>
-      <li><strong>θ 계산:</strong> <math><semantics><mrow><msub><mi>D</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">D_0</annotation></semantics></math>를 막대 근사로 어림했으므로 θ에는 몇 도의 계통 오차가 있다. θ 대신 δ로 그린 그래프도 함께 보여 준다.</li>
+      <li><strong>θ 계산:</strong> 바닥을 반타원체로 어림했으므로 θ에는 몇 도의 오차가 있다. 그래서 δ로 그린 그래프를 기본으로 쓴다.</li>
     </ul>
 
     <h3>5.5 결과 정리표</h3>
@@ -798,10 +800,10 @@ figure foreignObject math.d{math-style:normal}
         <thead><tr><th class="n">시간</th><th>내용</th><th>띄울 것</th></tr></thead>
         <tbody>
           <tr><td class="n">2분</td><td>도입: <b>시연 ①</b>부터 보여 주고 "왜 그럴까"로 시작한다</td><td>실물화상기</td></tr>
-          <tr><td class="n">4분</td><td>이론: 각운동량, 관성 곱과 주축, 구름 조건, 결합</td><td>그림 0-1, 1-1</td></tr>
+          <tr><td class="n">4분</td><td>이론: 도는 물체, 무게의 축과 바닥의 축, 회전과 흔들림의 주고받기, 마찰</td><td>그림 0-1, 1-1</td></tr>
           <tr><td class="n">3분</td><td>설계: δ를 바꿀 수 있는 래틀백, 측정 방법. <b>시연 ②</b></td><td>그림 2-1, 촬영 장면</td></tr>
           <tr><td class="n">4분</td><td>결과: ω–t, <math><semantics><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><msub><mi>t</mi><mi>r</mi></msub></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{1}{t_r}</annotation></semantics></math>–θ, 바닥별 결과. <b>시연 ③④⑤</b></td><td>그래프 세 장</td></tr>
-          <tr><td class="n">2분</td><td>한계: 손으로 돌리는 오차, θ 어림, 숟가락 자체의 비틀림</td><td>한 장</td></tr>
+          <tr><td class="n">2분</td><td>한계: 손으로 돌리는 오차, θ 어림, 출력물 자체의 비틀림</td><td>한 장</td></tr>
           <tr><td class="n">1분</td><td>토의 질문 두 개</td><td>질문 두 줄</td></tr>
         </tbody>
       </table>
@@ -813,9 +815,9 @@ figure foreignObject math.d{math-style:normal}
         <thead><tr><th>개념</th><th>비유</th></tr></thead>
         <tbody>
           <tr><td>관성 모멘트</td><td>회전의 무게. 같은 힘으로 밀어도 질량이 바깥에 있으면 잘 안 돈다</td></tr>
-          <tr><td>주축과 바닥 축의 어긋남</td><td>바퀴 축이 차체와 비스듬히 붙은 수레. 똑바로 밀어도 옆으로 비틀린다</td></tr>
-          <tr><td>결합</td><td>두 진자를 고무줄로 이으면 한쪽의 흔들림이 다른 쪽으로 넘어간다</td></tr>
-          <tr><td>불안정성</td><td>산꼭대기에 놓인 공. 아주 작은 흔들림도 점점 커진다</td></tr>
+          <tr><td>무게의 축과 바닥 축의 어긋남</td><td>바퀴 축이 차체와 비스듬히 붙은 수레. 똑바로 밀어도 옆으로 비틀린다</td></tr>
+          <tr><td>회전과 흔들림의 주고받기</td><td>두 진자를 고무줄로 이으면 한쪽의 흔들림이 다른 쪽으로 넘어간다</td></tr>
+          <tr><td>작은 흔들림이 커지는 것</td><td>산꼭대기에 놓인 공. 아주 작은 흔들림도 점점 커진다</td></tr>
           <tr><td>마찰이 일을 하지 않는다</td><td>굴러가는 바퀴의 바닥 점은 순간적으로 멈춰 있다. 멈춘 점에 작용하는 힘은 일을 하지 않는다</td></tr>
           <tr><td>손대칭</td><td>오른손 장갑은 뒤집지 않는 한 왼손에 맞지 않는다</td></tr>
         </tbody>
@@ -826,7 +828,7 @@ figure foreignObject math.d{math-style:normal}
     <ul class="plain">
       <li><strong>"에너지가 생긴다"고 말하지 않는다.</strong> 회전 에너지가 흔들림으로 갔다가 돌아올 뿐이다. 뒤집힌 뒤 회전이 처음보다 느린 것을 그래프로 보여 준다.</li>
       <li><strong>"각운동량 보존이 깨진다"고 말하지 않는다.</strong> 바닥이 돌림힘을 주므로 래틀백만의 각운동량은 원래 보존되지 않는다.</li>
-      <li><strong>모르는 부분은 선을 긋는다.</strong> 불안정성의 성장률을 식으로 유도하지는 못했다. "이론 논문(Moffatt & Tokieda 2008)에 따르면 이렇고, 저희는 그 예측 가운데 이것을 확인했습니다"처럼 말한다.</li>
+      <li><strong>모르는 부분은 선을 긋는다.</strong> 흔들림이 커지는 빠르기를 식으로 유도하지는 못했다. "이론 논문(Moffatt & Tokieda 2008)에 따르면 이렇고, 저희는 그 예측 가운데 이것을 확인했습니다"처럼 말한다.</li>
       <li><strong>토의 질문을 던진 뒤에는 기다린다.</strong> 10초쯤 조용해도 괜찮다. 그래도 조용하면 7부의 "나올 만한 답" 하나를 예로 든다.</li>
     </ul>
 
@@ -839,8 +841,8 @@ figure foreignObject math.d{math-style:normal}
           <tr><td class="n">2</td><td><b>시연 ①</b> (화면 전환)</td><td>실물화상기</td></tr>
           <tr><td class="n">3</td><td>질문: 법칙은 방향을 고르지 않는데 물체는 왜 고르나</td><td>문장 한 줄</td></tr>
           <tr><td class="n">4</td><td>각운동량과 바깥 돌림힘</td><td>식 하나</td></tr>
-          <tr><td class="n">5</td><td>관성 곱과 주축, 무게추를 비틀면</td><td>그림 0-1, 1.3절 식</td></tr>
-          <tr><td class="n">6</td><td>구름 조건과 결합, 불안정성</td><td>그림 1-1</td></tr>
+          <tr><td class="n">5</td><td>무게의 축과 바닥의 축, 막대를 틀면</td><td>그림 0-1, 1.3절 식</td></tr>
+          <tr><td class="n">6</td><td>회전과 흔들림의 주고받기, 마찰</td><td>그림 1-1</td></tr>
           <tr><td class="n">7</td><td>우리 래틀백: δ를 바꾼다</td><td>그림 2-1, 사진</td></tr>
           <tr><td class="n">8</td><td>측정: 슬로모션과 Tracker. <b>시연 ②</b></td><td>촬영 장면</td></tr>
           <tr><td class="n">9</td><td>결과 1: ω–t 그래프</td><td>우리 데이터</td></tr>
@@ -895,29 +897,29 @@ figure foreignObject math.d{math-style:normal}
     <h3>예상 질문</h3>
     <p class="lvl">기초 &#183; 누가 물어도 이상하지 않은 것</p>
     <div class="qa"><div class="q"><i>01</i>래틀백이 뭔가요?</div><div class="a">바닥이 둥근 길쭉한 물체인데, 한쪽 방향으로만 계속 돌고 반대로 돌리면 스스로 방향을 바꾸는 물체입니다. 바닥 모양의 축과 질량의 축이 서로 어긋나 있어서 생기는 현상입니다.</div></div>
-    <div class="qa"><div class="q"><i>02</i>왜 숟가락으로 만들었나요?</div><div class="a">숟가락 바닥은 길이 방향과 폭 방향의 휜 정도가 달라서 래틀백 바닥의 조건을 이미 갖추고 있습니다. 싸고 구하기 쉬워서 같은 몸체로 여러 개를 만들 수 있다는 점도 컸습니다.</div></div>
-    <div class="qa"><div class="q"><i>03</i>δ와 θ는 뭐가 다른가요?</div><div class="a">δ는 저희가 막대를 비튼 각도이고, θ는 래틀백 전체의 질량 주축이 실제로 돌아간 각도입니다. 숟가락 몸체 질량 때문에 θ는 δ보다 작습니다. 물리적으로 중요한 것은 θ라서 둘 다 기록했습니다.</div></div>
+    <div class="qa"><div class="q"><i>02</i>왜 3D 프린터로 크게 만들었나요?</div><div class="a">막대 각도와 동전 개수를 마음대로 바꿀 수 있게 하려고 바닥과 막대를 따로 설계했습니다. 크게 만들면 청중이 멀리서도 잘 보이고, 영상으로 각도를 재기도 쉽습니다.</div></div>
+    <div class="qa"><div class="q"><i>03</i>δ와 θ는 뭐가 다른가요?</div><div class="a">δ는 저희가 막대를 비튼 각도이고, θ는 래틀백 전체의 무게의 축이 실제로 돌아간 각도입니다. 바닥도 무게가 있어서 θ는 δ보다 작습니다. 실제로 중요한 것은 θ라서 둘 다 기록했습니다.</div></div>
     <div class="qa"><div class="q"><i>04</i>회전 속도는 어떻게 쟀나요?</div><div class="a">위에서 240fps 슬로모션으로 찍고, 양 끝 스티커를 Tracker로 추적했습니다. 두 점을 잇는 선의 각도를 시간으로 미분해서 각속도를 구했습니다.</div></div>
     <div class="qa"><div class="q"><i>05</i>폰 자이로 센서를 쓰면 더 쉽지 않나요?</div><div class="a">폰이 래틀백보다 훨씬 무거워서, 폰을 올리면 질량 분포를 폰이 정해 버립니다. 그래서 래틀백에 아무것도 올리지 않는 영상 측정을 택했습니다.</div></div>
     <div class="qa"><div class="q"><i>06</i>한 번 뒤집힌 뒤에는 또 뒤집히나요?</div><div class="a">대부분 좋아하는 방향으로 돌다가 그대로 멈춥니다. 다만 모양에 따라 두 방향 모두 불안정해서 여러 번 뒤집히는 래틀백도 있습니다. 저희 시제품에서 몇 번 뒤집혔는지는 측정 후 채울 것입니다.</div></div>
 
     <p class="lvl">중급 &#183; 설계를 파고드는 질문</p>
     <div class="qa"><div class="q"><i>07</i>손으로 돌리면 처음 속도가 매번 다르지 않나요?</div><div class="a">다릅니다. 그래서 영상에서 처음 각속도를 함께 재서, 처음 속도와 뒤집힘 시간의 관계를 먼저 확인했습니다. 그다음 처음 속도를 곱한 값이나 속도가 비슷한 시행끼리 비교했습니다.</div></div>
-    <div class="qa"><div class="q"><i>08</i>δ = 0°인 래틀백이 정말 대칭이라고 어떻게 확신하나요?</div><div class="a">확신할 수는 없습니다. 숟가락 자체가 조금 비틀려 있을 수 있습니다. 그래서 δ = 0° 래틀백을 양쪽으로 여러 번 돌려 둘 다 뒤집히지 않는지 확인했고, 한쪽을 좋아하는 숟가락은 기준에서 뺐습니다.</div></div>
-    <div class="qa"><div class="q"><i>09</i>+δ와 −δ의 결과가 완전히 같지 않은데요?</div><div class="a">막대 각도를 ±2° 정도 틀리게 붙일 수 있고, 숟가락도 완벽한 대칭이 아닙니다. 차이가 그 정도 오차 안에 들어오는지 측정 후 채울 것입니다. 좋아하는 방향이 반대라는 점은 오차와 상관없이 분명합니다.</div></div>
+    <div class="qa"><div class="q"><i>08</i>δ = 0°인 래틀백이 정말 대칭이라고 어떻게 확신하나요?</div><div class="a">확신할 수는 없습니다. 출력물 자체가 조금 비대칭일 수 있습니다. 그래서 δ = 0° 래틀백을 양쪽으로 여러 번 돌려 둘 다 뒤집히지 않는지 확인했고, 한쪽을 좋아하는 바닥은 기준에서 뺐습니다.</div></div>
+    <div class="qa"><div class="q"><i>09</i>+δ와 −δ의 결과가 완전히 같지 않은데요?</div><div class="a">막대 각도를 ±2° 정도 틀리게 붙일 수 있고, 출력한 바닥도 완벽한 대칭이 아닙니다. 차이가 그 정도 오차 안에 들어오는지 측정 후 채울 것입니다. 좋아하는 방향이 반대라는 점은 오차와 상관없이 분명합니다.</div></div>
     <div class="qa"><div class="q"><i>10</i>왜 바닥으로 유리판을 썼나요?</div><div class="a">평평하고, 단단하고, 미끄러지지 않을 만큼 마찰이 있어서입니다. 고무처럼 무른 바닥은 흔들림 에너지를 빨리 빨아들여 뒤집힘이 약해집니다.</div></div>
     <div class="qa"><div class="q"><i>11</i>세제를 바르면 왜 안 뒤집히나요?</div><div class="a">바닥이 미끄러우면 접촉점이 미끄러져서 구름 조건이 깨집니다. 회전 방향을 바꾸는 돌림힘은 미끄러지지 않는 마찰력에서 나오므로, 그 힘이 약해지면 뒤집힐 수 없습니다.</div></div>
-    <div class="qa"><div class="q"><i>12</i>무게추를 더 높이 달면 어떻게 되나요?</div><div class="a">질량 중심이 올라가 결합은 세지지만 쉽게 쓰러집니다. 질량 중심이 바닥의 곡률 반지름보다 높으면 서 있지도 못합니다. 그래서 막대를 숟가락 등에 바짝 붙였습니다.</div></div>
+    <div class="qa"><div class="q"><i>12</i>무게추를 더 높이 달면 어떻게 되나요?</div><div class="a">질량 중심이 올라가 결합은 세지지만 쉽게 쓰러집니다. 질량 중심이 바닥의 곡률 반지름보다 높으면 서 있지도 못합니다. 그래서 막대를 바닥 윗면에 바짝 붙였습니다.</div></div>
     <div class="qa"><div class="q"><i>13</i>두드리면 왜 돌기 시작하나요?</div><div class="a">끄덕임과 회전이 결합되어 있어서, 끄덕임 에너지의 일부가 회전으로 넘어갑니다. 넘어가는 방향은 비틀림의 부호가 정합니다. 끝을 칠 때와 옆을 칠 때 회전 방향이 보통 반대인데, 저희 결과는 측정 후 채울 것입니다.</div></div>
 
     <p class="lvl">심화 &#183; 원리를 끝까지 묻는 질문</p>
     <div class="qa"><div class="q"><i>14</i>회전 방향이 바뀌면 각운동량 보존이 깨진 것 아닌가요?</div><div class="a">깨진 것이 아닙니다. 각운동량 보존은 바깥 돌림힘이 없을 때만 성립합니다. 래틀백에는 바닥의 수직항력과 마찰력이 접촉점에 작용하고, 접촉점이 질량 중심 바로 아래에 있지 않으므로 돌림힘이 생깁니다. 래틀백과 지구를 합친 전체의 각운동량은 보존됩니다.</div></div>
     <div class="qa"><div class="q"><i>15</i>에너지는 보존되나요?</div><div class="a">이상적인 모형에서는 보존됩니다. 미끄러지지 않는 접촉점은 순간적으로 멈춰 있어서 정지 마찰력이 일을 하지 않기 때문입니다. 회전 에너지가 흔들림으로 갔다가 반대 회전으로 돌아옵니다. 실제로는 구름 저항과 공기 저항 때문에 뒤집힌 뒤의 회전이 처음보다 느립니다.</div></div>
-    <div class="qa"><div class="q"><i>16</i>왜 한쪽 방향에서만 흔들림이 커지나요?</div><div class="a">돌고 있는 래틀백에서는 끄덕임, 좌우 흔들림, 회전이 서로 이어져 있습니다. 주축이 비틀려 있으면 이 연결에 방향이 생겨서, 한쪽으로 돌 때는 작은 흔들림이 사그라들고 반대로 돌 때는 지수함수처럼 커집니다. 성장률을 직접 유도하지는 못했고, 이론 논문(Moffatt & Tokieda 2008)의 선형 분석 결과를 따랐습니다.</div></div>
-    <div class="qa"><div class="q"><i>17</i>시간을 거꾸로 돌리면 어떻게 되나요?</div><div class="a">마찰로 에너지가 줄어드는 부분을 빼면, 뉴턴 법칙은 시간을 거꾸로 돌려도 성립합니다. 하지만 구름 조건이 붙은 운동은 해밀턴 역학의 꼴로 쓸 수 없어서 일반적인 보존 법칙들이 다 성립하지는 않습니다. 이 부분은 저희 수준을 넘어서 참고 문헌으로 소개만 합니다.</div></div>
+    <div class="qa"><div class="q"><i>16</i>왜 한쪽 방향에서만 흔들림이 커지나요?</div><div class="a">돌고 있는 래틀백에서는 끄덕임, 좌우 흔들림, 회전이 서로 이어져 있습니다. 무게의 축이 바닥의 축과 어긋나 있으면 이 연결에 방향이 생겨서, 한쪽으로 돌 때는 작은 흔들림이 사그라들고 반대로 돌 때는 점점 커집니다. 커지는 빠르기를 직접 계산하지는 못했고, 이론 논문(Moffatt & Tokieda 2008)의 결과를 따랐습니다.</div></div>
+    <div class="qa"><div class="q"><i>17</i>시간을 거꾸로 돌리면 어떻게 되나요?</div><div class="a">마찰로 에너지가 줄어드는 부분을 빼면, 뉴턴 법칙은 시간을 거꾸로 돌려도 성립합니다. 하지만 "미끄러지지 않고 구르는" 조건이 붙은 운동은 보통의 역학과 수학적 구조가 달라서, 익숙한 보존 법칙들이 다 성립하지는 않습니다. 이 부분은 저희 수준을 넘어서 참고 문헌으로 소개만 합니다.</div></div>
     <div class="qa"><div class="q"><i>18</i>이 현상을 어디에 쓸 수 있나요?</div><div class="a">래틀백 자체를 쓰는 곳은 드뭅니다. 다만 "미끄러지지 않고 구르는" 조건을 다루는 수학은 바퀴 달린 로봇이나 자전거의 운동 제어에서 그대로 쓰입니다. 래틀백은 그 수학이 얼마나 직관과 다른 결과를 내는지 보여 주는 예입니다.</div></div>
     <div class="qa"><div class="q"><i>19</i>시판 래틀백은 비틀림이 몇 도인가요?</div><div class="a">겉으로는 알 수 없습니다. 저희 δ별 래틀백과 행동을 비교해서 가장 비슷한 θ로 어림했습니다. 결과는 측정 후 채울 것입니다.</div></div>
-    <div class="qa"><div class="q"><i>20</i>다시 한다면 무엇을 바꾸겠습니까?</div><div class="a">세 가지입니다. 일정한 속도로 돌려 놓는 장치를 만들어 처음 속도를 맞추고, 옆에서도 찍어 끄덕임의 크기를 재고, 숟가락 대신 3D 프린터로 곡률을 정확히 아는 몸체를 만들겠습니다.</div></div>
+    <div class="qa"><div class="q"><i>20</i>다시 한다면 무엇을 바꾸겠습니까?</div><div class="a">세 가지입니다. 일정한 속도로 돌려 놓는 장치를 만들어 처음 속도를 맞추고, 옆에서도 찍어 끄덕임의 크기를 재고, 회전대처럼 일정한 속도로 돌려 주는 받침을 3D 프린터로 만들어 보겠습니다.</div></div>
   </div>
 </section>
 
@@ -935,12 +937,11 @@ figure foreignObject math.d{math-style:normal}
           <tr><td>ω</td><td>각속도 (위에서 볼 때 시계 반대 방향이 +)</td><td>rad/s</td></tr>
           <tr><td>L</td><td>각운동량</td><td>kg·m²/s</td></tr>
           <tr><td>I</td><td>관성 모멘트</td><td>kg·m²</td></tr>
-          <tr><td><math><semantics><mrow><msub><mi>I</mi><mrow><mi>x</mi><mi>y</mi></mrow></msub></mrow><annotation encoding="application/x-tex">I_{xy}</annotation></semantics></math></td><td>관성 곱</td><td>kg·m²</td></tr>
-          <tr><td>δ</td><td>막대를 비튼 각</td><td>°</td></tr>
-          <tr><td>θ</td><td>질량 주축이 돌아간 각 (계산값)</td><td>°</td></tr>
+                    <tr><td>δ</td><td>막대를 튼 각 (팔 각도)</td><td>°</td></tr>
+          <tr><td>θ</td><td>무게의 축이 실제로 돌아간 각 (계산값)</td><td>°</td></tr>
           <tr><td>m, a</td><td>무게추 하나의 질량, 중심에서의 거리</td><td>kg, m</td></tr>
-          <tr><td>M, L</td><td>숟가락 머리의 질량과 길이</td><td>kg, m</td></tr>
-          <tr><td><math><semantics><mrow><msub><mi>D</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">D_0</annotation></semantics></math></td><td>숟가락 몸체만의 관성 모멘트 차이</td><td>kg·m²</td></tr>
+          <tr><td>M, L, W</td><td>바닥의 질량, 길이, 폭</td><td>g, mm</td></tr>
+          <tr><td><math><semantics><mrow><msub><mi>D</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">D_0</annotation></semantics></math></td><td>바닥만의 값 (2.5절)</td><td>kg·m²</td></tr>
           <tr><td>κ, ρ</td><td>곡률, 곡률 반지름</td><td>1/m, m</td></tr>
           <tr><td><math><semantics><mrow><msub><mi>ω</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">\omega_0</annotation></semantics></math>, <math><semantics><mrow><msub><mi>ω</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">\omega_1</annotation></semantics></math></td><td>처음 각속도, 뒤집힌 뒤 최대 각속도</td><td>rad/s</td></tr>
           <tr><td><math><semantics><mrow><msub><mi>t</mi><mi>r</mi></msub></mrow><annotation encoding="application/x-tex">t_r</annotation></semantics></math></td><td>뒤집힘 시간</td><td>s</td></tr>
@@ -950,17 +951,17 @@ figure foreignObject math.d{math-style:normal}
 
     <h3>B. 준비 일정</h3>
     <div class="days">
-      <div class="day"><b>10/20~22</b><div>1부 읽기, 재료 사기<em>숟가락은 두세 종류를 산다. 시판 래틀백을 주문한다</em></div></div>
-      <div class="day"><b>10/23~26</b><div>시제품 만들기와 점검 (2.4절)<em>δ = 20° 하나가 잘 뒤집힐 때까지 숟가락과 무게추를 바꿔 본다. Tracker 설치와 연습</em></div></div>
-      <div class="day"><b>10/27~28</b><div>δ별 세트 9개 만들기<em>각도와 무게를 기록하고 <math><semantics><mrow><msub><mi>D</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">D_0</annotation></semantics></math>와 θ를 계산한다</em></div></div>
+      <div class="day"><b>10/20~22</b><div>1부 읽기, 설계 파일 확인<em>선생님께 3D 프린터 사용을 여쭙고, OpenSCAD로 STL을 뽑는다. M4 볼트·너트를 산다</em></div></div>
+      <div class="day"><b>10/23~25</b><div>첫 출력과 다듬기 (2.3~2.4절)<em>바닥 1개, 막대 1개. 사포질 후 2.6절 점검</em></div></div>
+      <div class="day"><b>10/26~28</b><div>고치고 다시 출력<em>잘 안 되면 깊이 H를 바꾼다. 시연용으로 두 번째 세트를 뽑는다. Tracker 연습</em></div></div>
       <div class="day"><b>10/29~11/1</b><div>본 측정<em>실험 1~4. 시연용 영상도 이때 찍는다</em></div></div>
-      <div class="day"><b>11/2~3</b><div>분석과 그래프<em>5부의 그래프 세 장과 결과 정리표</em></div></div>
-      <div class="day"><b>11/4~6</b><div>슬라이드, 시연 리허설, 질의응답 연습<em>시연을 넣은 20분 리허설을 두 번 이상. 예상 질문을 역할별로 나눠 답한다</em></div></div>
-      <div class="day"><b>11/7</b><div>발표<em>유리판과 래틀백 예비품을 꼭 챙긴다</em></div></div>
+      <div class="day"><b>11/2~3</b><div>결과 정리<em>5부의 그래프 세 장과 결과 정리표</em></div></div>
+      <div class="day"><b>11/4~6</b><div>슬라이드, 시연 리허설, 질의응답 연습<em>시연을 넣은 20분 리허설을 두 번 이상</em></div></div>
+      <div class="day"><b>11/7</b><div>발표<em>유리판, 렌치, 예비 볼트를 꼭 챙긴다</em></div></div>
     </div>
 
     <h3>C. 실험 기록지</h3>
-    <p class="sub" style="margin-bottom:12px">래틀백 이름 ____ · δ = ____° · m = ____ g · a = ____ cm · M = ____ g · L = ____ cm · 바닥 ________</p>
+    <p class="sub" style="margin-bottom:12px">바닥 번호 ____ · 막대 각도 δ = ____° · 동전 한쪽 ____개 · 바닥 무게 M = ____ g · 책상 바닥 ________</p>
     <div class="tw">
       <table>
         <thead><tr><th class="n">회</th><th>돌린 방향</th><th>뒤집힘 (O/X)</th><th class="n"><math><semantics><mrow><msub><mi>ω</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">\omega_0</annotation></semantics></math></th><th class="n"><math><semantics><mrow><msub><mi>t</mi><mi>r</mi></msub></mrow><annotation encoding="application/x-tex">t_r</annotation></semantics></math></th><th class="n"><math><semantics><mrow><msub><mi>ω</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">\omega_1</annotation></semantics></math></th><th>영상 파일명</th></tr></thead>
@@ -1000,7 +1001,8 @@ figure foreignObject math.d{math-style:normal}
 
     <h3>지금 당장 확인해야 할 것</h3>
     <ul class="plain">
-      <li><strong>숟가락 시제품이 실제로 뒤집히는지.</strong> 모든 일정이 여기에 걸려 있다. 첫 주 안에 안 되면 시판 래틀백 중심으로 바꾼다(2.4절).</li>
+      <li><strong>첫 출력이 실제로 마음을 바꾸는지.</strong> 모든 일정이 여기에 걸려 있다. 안 되면 깊이 H와 동전 개수를 바꿔 다시 뽑는다(2.6절).</li>
+      <li><strong>학교 3D 프린터 크기와 사용 시간.</strong> 출력판이 180 mm보다 작으면 설계 파일의 L을 줄인다.</li>
       <li><strong>발표장에서 시연할 자리.</strong> 책상 크기, 실물화상기, 화면 연결을 주최 측에 미리 묻는다.</li>
       <li><strong>240fps 촬영이 되는 폰.</strong> 팀원 폰 가운데 슬로모션 화질이 가장 좋은 것을 측정용으로 정한다.</li>
     </ul>
@@ -1008,16 +1010,16 @@ figure foreignObject math.d{math-style:normal}
     <h3>자료 자체의 한계</h3>
     <ul class="plain">
       <li><strong>이 자료의 예상은 실험 전 추측이다.</strong> 뒤집힘 시간, 두드리기 방향, 바닥별 결과는 모두 측정 후 바뀔 수 있다.</li>
-      <li><strong>θ 계산은 어림이다.</strong> 숟가락 몸체를 막대로 근사했다. 숟가락 바닥의 실제 곡률 축도 재지 않고 긴 축과 같다고 가정했다.</li>
-      <li><strong>불안정성의 성장률을 유도하지 않았다.</strong> 운동 방정식이 복잡해서 이론 논문의 결과를 인용하는 데 그쳤다.</li>
+      <li><strong>θ 계산은 어림이다.</strong> 바닥을 반타원체로, 속은 고르게 찼다고 보고 계산했다. 사포질로 바닥 모양이 조금 바뀐 것도 반영하지 못한다.</li>
+      <li><strong>흔들림이 커지는 빠르기를 유도하지 않았다.</strong> 운동 방정식이 복잡해서 이론 논문의 결과를 인용하는 데 그쳤다.</li>
       <li><strong>끄덕임의 크기를 정확히 재지 못한다.</strong> 카메라가 한 대면 위에서만 찍게 되어 에너지가 회전과 흔들림 사이를 오가는 것을 숫자로 보이기 어렵다.</li>
     </ul>
 
     <h3>여유가 되면 해 볼 것</h3>
     <ul class="plain">
       <li>옆에서 한 대 더 찍어 끄덕임 각을 재고, 회전 에너지와 흔들림 에너지를 따로 계산해 합이 어떻게 변하는지 본다.</li>
-      <li>3D 프린터로 곡률과 비틀림을 정확히 정한 몸체를 만든다.</li>
-      <li>무게추 대신 무게추 높이를 바꿔, 질량 중심 높이가 뒤집힘에 주는 영향을 잰다.</li>
+      <li>바닥 깊이 H가 다른 바닥을 여러 개 뽑아, 바닥 모양이 결과에 주는 영향을 잰다.</li>
+      <li>동전을 받침 위로 높이 쌓아, 질량 중심 높이가 뒤집힘에 주는 영향을 잰다.</li>
     </ul>
   </div>
 </section>
@@ -1026,7 +1028,7 @@ figure foreignObject math.d{math-style:normal}
   <div class="wrap">
     <p class="fnav"><a href="./">&larr; 첫 화면</a><a href="#top" data-top>맨 위로</a><a href="schedule.html">일정 보기 &rarr;</a></p>
     <p>Inertia · 학술교류 포럼 특수 세션 공부자료 · 래틀백 · 2026년 10월</p>
-    <p>예상값은 플라스틱 숟가락 몸체와 500원 동전 두 개를 가정한 것이다. 장치가 달라지면 다시 계산한다.</p>
+    <p>예상값은 길이 180 mm 반타원체 바닥과 500원 동전을 가정한 것이다. 장치가 달라지면 다시 계산한다.</p>
   </div>
 </footer>
 <aside class="toc" id="toc" aria-label="이 부의 절"></aside>
