@@ -22,19 +22,19 @@
 /* 이 페이지는 다른 파일 없이 혼자 그려진다. 배경색과 글자색을 한곳에서 정한다. */
 :root{
   --bg:#F4F6F1; --card:#FFFFFF; --ink:#191E1A; --ink2:#4B564F; --ink3:#6F7A72; --rule:#D9DED5;
-  --blue:#1B5A8B; --rust:#A6411B;
+  --blue:#1B5A8B; --rust:#A6411B; --green:#2F6B3A;
   --sans:'IBM Plex Sans KR',system-ui,-apple-system,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;
   --display:'Instrument Serif','Times New Roman',serif;
 }
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
     --bg:#111510; --card:#191E1A; --ink:#ECEFE9; --ink2:#B4BDB6; --ink3:#8E978F; --rule:#2E352F;
-    --blue:#7DBBE8; --rust:#EE9A76;
+    --blue:#7DBBE8; --rust:#EE9A76; --green:#8FCB95;
   }
 }
 :root[data-theme="dark"]{
   --bg:#111510; --card:#191E1A; --ink:#ECEFE9; --ink2:#B4BDB6; --ink3:#8E978F; --rule:#2E352F;
-  --blue:#7DBBE8; --rust:#EE9A76;
+  --blue:#7DBBE8; --rust:#EE9A76; --green:#8FCB95;
 }
 *{box-sizing:border-box}
 html,body{margin:0;background:var(--bg);color:var(--ink)}
@@ -44,7 +44,7 @@ body{font-family:var(--sans);font-weight:400;-webkit-text-size-adjust:100%;word-
 .wordmark{font-family:var(--display);font-weight:400;font-size:clamp(84px,17vw,168px);line-height:1;letter-spacing:-.02em;margin:0;color:var(--ink)}
 .tag{margin:14px 0 0;font-size:clamp(16px,2.4vw,19px);color:var(--ink2)}
 
-.choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;width:100%;max-width:600px;margin-top:clamp(36px,7vh,56px)}
+.choices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;width:100%;max-width:880px;margin-top:clamp(36px,7vh,56px)}
 .choice{
   --ac:var(--blue);
   display:flex;flex-direction:column;align-items:flex-start;gap:6px;
@@ -54,6 +54,7 @@ body{font-family:var(--sans);font-weight:400;-webkit-text-size-adjust:100%;word-
   transition:border-color .2s ease,transform .2s ease;
 }
 .choice.plan{--ac:var(--rust)}
+.choice.exp{--ac:var(--green)}
 .choice:hover,.choice:focus-visible{border-color:var(--ac);transform:translateY(-2px)}
 .choice:focus-visible{outline:2px solid var(--ac);outline-offset:3px}
 .choice .t{display:flex;align-items:center;justify-content:space-between;width:100%;font-size:24px;font-weight:600;letter-spacing:-.01em}
@@ -70,6 +71,9 @@ body{font-family:var(--sans);font-weight:400;-webkit-text-size-adjust:100%;word-
 .home>.meta{animation-delay:.24s}
 @keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){.home>*{animation:none}.choice,.choice .t::after{transition:none}}
+@media (max-width:760px){
+  .choices{grid-template-columns:1fr;max-width:600px}
+}
 @media (max-width:520px){
   .choices{grid-template-columns:1fr}
   .choice{padding:20px}
@@ -85,6 +89,10 @@ body{font-family:var(--sans);font-weight:400;-webkit-text-size-adjust:100%;word-
     <a class="choice study" href="study.html">
       <span class="t">공부자료</span>
       <span class="d">래틀백: 한쪽으로만 도는 물체의 비밀</span>
+    </a>
+    <a class="choice exp" href="experiment.html">
+      <span class="t">실험 방법</span>
+      <span class="d">촬영부터 Tracker 분석, 그래프까지 순서대로</span>
     </a>
     <a class="choice plan" href="schedule.html">
       <span class="t">일정</span>
